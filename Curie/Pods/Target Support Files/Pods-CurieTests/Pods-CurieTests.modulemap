@@ -1,0 +1,6 @@
+framework module Pods_CurieTests {
+  umbrella header "Pods-CurieTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
