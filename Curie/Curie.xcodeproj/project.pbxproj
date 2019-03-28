@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		455B188E12C45CDEC03B01B5 /* Pods_CurieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47574EF40A1F0F83FE993665 /* Pods_CurieUITests.framework */; };
+		979B5ED2445993443CC48043 /* Pods_Curie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 070D9070832A351A05C3B056 /* Pods_Curie.framework */; };
+		B8191E5F0A9FF8A1976C6120 /* Pods_CurieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792BCEA49537A685E69192AD /* Pods_CurieTests.framework */; };
+		D835DBC9224D226E001FE2EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBC8224D226E001FE2EE /* AppDelegate.swift */; };
+		D835DBCB224D226E001FE2EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBCA224D226E001FE2EE /* ViewController.swift */; };
+		D835DBCE224D226E001FE2EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D835DBCC224D226E001FE2EE /* Main.storyboard */; };
+		D835DBD0224D2271001FE2EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D835DBCF224D2271001FE2EE /* Assets.xcassets */; };
+		D835DBD3224D2271001FE2EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D835DBD1224D2271001FE2EE /* LaunchScreen.storyboard */; };
+		D835DBDE224D2271001FE2EE /* CurieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBDD224D2271001FE2EE /* CurieTests.swift */; };
+		D835DBE9224D2271001FE2EE /* CurieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBE8224D2271001FE2EE /* CurieUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D835DBDA224D2271001FE2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D835DBBD224D226E001FE2EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D835DBC4224D226E001FE2EE;
+			remoteInfo = Curie;
+		};
+		D835DBE5224D2271001FE2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D835DBBD224D226E001FE2EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D835DBC4224D226E001FE2EE;
+			remoteInfo = Curie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		070D9070832A351A05C3B056 /* Pods_Curie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E24C9003C50F23542C717CB /* Pods-CurieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurieUITests/Pods-CurieUITests.release.xcconfig"; sourceTree = "<group>"; };
+		335FCB0E3FF5CB62A6806699 /* Pods-CurieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurieTests/Pods-CurieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		33E18DD070AF2A7F1B0738C1 /* Pods-CurieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurieTests/Pods-CurieTests.release.xcconfig"; sourceTree = "<group>"; };
+		47574EF40A1F0F83FE993665 /* Pods_CurieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		792BCEA49537A685E69192AD /* Pods_CurieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BAFC89A8B56185518ACE342 /* Pods-CurieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurieUITests/Pods-CurieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C7CE18150DF6C230373EA274 /* Pods-Curie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Curie/Pods-Curie.release.xcconfig"; sourceTree = "<group>"; };
+		D57FC5FF5D71B18038F70DFD /* Pods-Curie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Curie/Pods-Curie.debug.xcconfig"; sourceTree = "<group>"; };
+		D835DBC5224D226E001FE2EE /* Curie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D835DBC8224D226E001FE2EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D835DBCA224D226E001FE2EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D835DBCD224D226E001FE2EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D835DBCF224D2271001FE2EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D835DBD2224D2271001FE2EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D835DBD4224D2271001FE2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D835DBD9224D2271001FE2EE /* CurieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D835DBDD224D2271001FE2EE /* CurieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurieTests.swift; sourceTree = "<group>"; };
+		D835DBDF224D2271001FE2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D835DBE4224D2271001FE2EE /* CurieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CurieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D835DBE8224D2271001FE2EE /* CurieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurieUITests.swift; sourceTree = "<group>"; };
+		D835DBEA224D2271001FE2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D835DBC2224D226E001FE2EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				979B5ED2445993443CC48043 /* Pods_Curie.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D835DBD6224D2271001FE2EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8191E5F0A9FF8A1976C6120 /* Pods_CurieTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D835DBE1224D2271001FE2EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				455B188E12C45CDEC03B01B5 /* Pods_CurieUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		461ABD2EAEA0DCA8720DF625 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D57FC5FF5D71B18038F70DFD /* Pods-Curie.debug.xcconfig */,
+				C7CE18150DF6C230373EA274 /* Pods-Curie.release.xcconfig */,
+				335FCB0E3FF5CB62A6806699 /* Pods-CurieTests.debug.xcconfig */,
+				33E18DD070AF2A7F1B0738C1 /* Pods-CurieTests.release.xcconfig */,
+				8BAFC89A8B56185518ACE342 /* Pods-CurieUITests.debug.xcconfig */,
+				1E24C9003C50F23542C717CB /* Pods-CurieUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		51439AEE89564251321A87A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				070D9070832A351A05C3B056 /* Pods_Curie.framework */,
+				792BCEA49537A685E69192AD /* Pods_CurieTests.framework */,
+				47574EF40A1F0F83FE993665 /* Pods_CurieUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D835DBBC224D226E001FE2EE = {
+			isa = PBXGroup;
+			children = (
+				D835DBC7224D226E001FE2EE /* Curie */,
+				D835DBDC224D2271001FE2EE /* CurieTests */,
+				D835DBE7224D2271001FE2EE /* CurieUITests */,
+				D835DBC6224D226E001FE2EE /* Products */,
+				461ABD2EAEA0DCA8720DF625 /* Pods */,
+				51439AEE89564251321A87A6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D835DBC6224D226E001FE2EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D835DBC5224D226E001FE2EE /* Curie.app */,
+				D835DBD9224D2271001FE2EE /* CurieTests.xctest */,
+				D835DBE4224D2271001FE2EE /* CurieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D835DBC7224D226E001FE2EE /* Curie */ = {
+			isa = PBXGroup;
+			children = (
+				D835DBC8224D226E001FE2EE /* AppDelegate.swift */,
+				D835DBCA224D226E001FE2EE /* ViewController.swift */,
+				D835DBCC224D226E001FE2EE /* Main.storyboard */,
+				D835DBCF224D2271001FE2EE /* Assets.xcassets */,
+				D835DBD1224D2271001FE2EE /* LaunchScreen.storyboard */,
+				D835DBD4224D2271001FE2EE /* Info.plist */,
+			);
+			path = Curie;
+			sourceTree = "<group>";
+		};
+		D835DBDC224D2271001FE2EE /* CurieTests */ = {
+			isa = PBXGroup;
+			children = (
+				D835DBDD224D2271001FE2EE /* CurieTests.swift */,
+				D835DBDF224D2271001FE2EE /* Info.plist */,
+			);
+			path = CurieTests;
+			sourceTree = "<group>";
+		};
+		D835DBE7224D2271001FE2EE /* CurieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D835DBE8224D2271001FE2EE /* CurieUITests.swift */,
+				D835DBEA224D2271001FE2EE /* Info.plist */,
+			);
+			path = CurieUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D835DBC4224D226E001FE2EE /* Curie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D835DBED224D2271001FE2EE /* Build configuration list for PBXNativeTarget "Curie" */;
+			buildPhases = (
+				B726B9A0082AD332B0963F33 /* [CP] Check Pods Manifest.lock */,
+				D835DBC1224D226E001FE2EE /* Sources */,
+				D835DBC2224D226E001FE2EE /* Frameworks */,
+				D835DBC3224D226E001FE2EE /* Resources */,
+				D74442B9B7E0506DB53EB56A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Curie;
+			productName = Curie;
+			productReference = D835DBC5224D226E001FE2EE /* Curie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D835DBD8224D2271001FE2EE /* CurieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D835DBF0224D2271001FE2EE /* Build configuration list for PBXNativeTarget "CurieTests" */;
+			buildPhases = (
+				82F6758CA47996F5FF74BA52 /* [CP] Check Pods Manifest.lock */,
+				D835DBD5224D2271001FE2EE /* Sources */,
+				D835DBD6224D2271001FE2EE /* Frameworks */,
+				D835DBD7224D2271001FE2EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D835DBDB224D2271001FE2EE /* PBXTargetDependency */,
+			);
+			name = CurieTests;
+			productName = CurieTests;
+			productReference = D835DBD9224D2271001FE2EE /* CurieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D835DBE3224D2271001FE2EE /* CurieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D835DBF3224D2271001FE2EE /* Build configuration list for PBXNativeTarget "CurieUITests" */;
+			buildPhases = (
+				8C38E127929ABD04436F9427 /* [CP] Check Pods Manifest.lock */,
+				D835DBE0224D2271001FE2EE /* Sources */,
+				D835DBE1224D2271001FE2EE /* Frameworks */,
+				D835DBE2224D2271001FE2EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D835DBE6224D2271001FE2EE /* PBXTargetDependency */,
+			);
+			name = CurieUITests;
+			productName = CurieUITests;
+			productReference = D835DBE4224D2271001FE2EE /* CurieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D835DBBD224D226E001FE2EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Farhan Farooqui";
+				TargetAttributes = {
+					D835DBC4224D226E001FE2EE = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					D835DBD8224D2271001FE2EE = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = D835DBC4224D226E001FE2EE;
+					};
+					D835DBE3224D2271001FE2EE = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = D835DBC4224D226E001FE2EE;
+					};
+				};
+			};
+			buildConfigurationList = D835DBC0224D226E001FE2EE /* Build configuration list for PBXProject "Curie" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D835DBBC224D226E001FE2EE;
+			productRefGroup = D835DBC6224D226E001FE2EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D835DBC4224D226E001FE2EE /* Curie */,
+				D835DBD8224D2271001FE2EE /* CurieTests */,
+				D835DBE3224D2271001FE2EE /* CurieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D835DBC3224D226E001FE2EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D835DBD3224D2271001FE2EE /* LaunchScreen.storyboard in Resources */,
+				D835DBD0224D2271001FE2EE /* Assets.xcassets in Resources */,
+				D835DBCE224D226E001FE2EE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D835DBD7224D2271001FE2EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D835DBE2224D2271001FE2EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82F6758CA47996F5FF74BA52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CurieTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C38E127929ABD04436F9427 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CurieUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B726B9A0082AD332B0963F33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Curie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D74442B9B7E0506DB53EB56A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Curie/Pods-Curie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Auth0/Auth0.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleKeychain/SimpleKeychain.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Auth0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleKeychain.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Curie/Pods-Curie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D835DBC1224D226E001FE2EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D835DBCB224D226E001FE2EE /* ViewController.swift in Sources */,
+				D835DBC9224D226E001FE2EE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D835DBD5224D2271001FE2EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D835DBDE224D2271001FE2EE /* CurieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D835DBE0224D2271001FE2EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D835DBE9224D2271001FE2EE /* CurieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D835DBDB224D2271001FE2EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D835DBC4224D226E001FE2EE /* Curie */;
+			targetProxy = D835DBDA224D2271001FE2EE /* PBXContainerItemProxy */;
+		};
+		D835DBE6224D2271001FE2EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D835DBC4224D226E001FE2EE /* Curie */;
+			targetProxy = D835DBE5224D2271001FE2EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D835DBCC224D226E001FE2EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D835DBCD224D226E001FE2EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D835DBD1224D2271001FE2EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D835DBD2224D2271001FE2EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D835DBEB224D2271001FE2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D835DBEC224D2271001FE2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D835DBEE224D2271001FE2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D57FC5FF5D71B18038F70DFD /* Pods-Curie.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AL899TPVP;
+				INFOPLIST_FILE = Curie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhanf.Curie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D835DBEF224D2271001FE2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7CE18150DF6C230373EA274 /* Pods-Curie.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AL899TPVP;
+				INFOPLIST_FILE = Curie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhanf.Curie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D835DBF1224D2271001FE2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335FCB0E3FF5CB62A6806699 /* Pods-CurieTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AL899TPVP;
+				INFOPLIST_FILE = CurieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhanf.CurieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curie.app/Curie";
+			};
+			name = Debug;
+		};
+		D835DBF2224D2271001FE2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E18DD070AF2A7F1B0738C1 /* Pods-CurieTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AL899TPVP;
+				INFOPLIST_FILE = CurieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhanf.CurieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curie.app/Curie";
+			};
+			name = Release;
+		};
+		D835DBF4224D2271001FE2EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BAFC89A8B56185518ACE342 /* Pods-CurieUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AL899TPVP;
+				INFOPLIST_FILE = CurieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhanf.CurieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Curie;
+			};
+			name = Debug;
+		};
+		D835DBF5224D2271001FE2EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E24C9003C50F23542C717CB /* Pods-CurieUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9AL899TPVP;
+				INFOPLIST_FILE = CurieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.farhanf.CurieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Curie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D835DBC0224D226E001FE2EE /* Build configuration list for PBXProject "Curie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D835DBEB224D2271001FE2EE /* Debug */,
+				D835DBEC224D2271001FE2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D835DBED224D2271001FE2EE /* Build configuration list for PBXNativeTarget "Curie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D835DBEE224D2271001FE2EE /* Debug */,
+				D835DBEF224D2271001FE2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D835DBF0224D2271001FE2EE /* Build configuration list for PBXNativeTarget "CurieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D835DBF1224D2271001FE2EE /* Debug */,
+				D835DBF2224D2271001FE2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D835DBF3224D2271001FE2EE /* Build configuration list for PBXNativeTarget "CurieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D835DBF4224D2271001FE2EE /* Debug */,
+				D835DBF5224D2271001FE2EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D835DBBD224D226E001FE2EE /* Project object */;
+}
