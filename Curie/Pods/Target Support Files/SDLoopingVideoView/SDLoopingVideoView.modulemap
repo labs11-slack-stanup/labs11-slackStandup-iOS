@@ -1,0 +1,6 @@
+framework module SDLoopingVideoView {
+  umbrella header "SDLoopingVideoView-umbrella.h"
+
+  export *
+  module * { export * }
+}
