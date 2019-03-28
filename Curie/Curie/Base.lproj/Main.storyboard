@@ -22,18 +22,30 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whW-hW-azk">
-                                        <rect key="frame" x="183.5" y="600" width="47" height="30"/>
+                                        <rect key="frame" x="107" y="704" width="200" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Sign In"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="8Fd-T2-6WT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqe-4j-Ad6"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otB-zK-Ti3" customClass="OutlinedLabel" customModule="Curie" customModuleProvider="target">
+                                        <rect key="frame" x="108.5" y="150" width="197.5" height="92"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="77"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="whW-hW-azk" secondAttribute="bottom" constant="266" id="GAG-C2-hWT"/>
-                                    <constraint firstItem="whW-hW-azk" firstAttribute="centerX" secondItem="JV8-OE-whJ" secondAttribute="centerX" id="pT0-dt-I0r"/>
+                                    <constraint firstItem="otB-zK-Ti3" firstAttribute="top" secondItem="JV8-OE-whJ" secondAttribute="top" constant="150" id="eLj-Zz-nib"/>
+                                    <constraint firstItem="whW-hW-azk" firstAttribute="centerX" secondItem="JV8-OE-whJ" secondAttribute="centerX" id="lHq-t0-QDd"/>
+                                    <constraint firstItem="otB-zK-Ti3" firstAttribute="centerX" secondItem="JV8-OE-whJ" secondAttribute="centerX" id="omb-hH-ONI"/>
+                                    <constraint firstAttribute="bottom" secondItem="whW-hW-azk" secondAttribute="bottom" constant="150" id="wac-XC-L7C"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="people"/>

@@ -14,6 +14,10 @@ class ViewController: UIViewController {
    
     @IBOutlet weak var signInButton: UIButton!
     
+    override func viewDidLoad() {
+        signInButton.layer.cornerRadius = 10
+    }
+    
 
     @IBAction func signIn(_ sender: Any) {
         
