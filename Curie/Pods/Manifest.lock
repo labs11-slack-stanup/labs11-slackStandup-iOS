@@ -1,20 +1,24 @@
 PODS:
   - Auth0 (1.14.2):
     - SimpleKeychain
+  - SDLoopingVideoView (1.0.3)
   - SimpleKeychain (0.8.1)
 
 DEPENDENCIES:
   - Auth0 (~> 1.13)
+  - SDLoopingVideoView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Auth0
+    - SDLoopingVideoView
     - SimpleKeychain
 
 SPEC CHECKSUMS:
   Auth0: df9ac013e7850052fea1dcd53fa09bb129121721
+  SDLoopingVideoView: b5303b3c0b49c39e07b8baf493491bf54aff36ff
   SimpleKeychain: e2485c28d82fcece35e9e41faeac42ebfe614815
 
-PODFILE CHECKSUM: cf42b0c86fb7251ccf45e9fc51259c4b55513011
+PODFILE CHECKSUM: 3ea9b359516aa25de1ff2afa246787cd427c6e20
 
 COCOAPODS: 1.5.3
