@@ -21,6 +21,7 @@
 		D87864AB224D692F0097671F /* people.mov in Resources */ = {isa = PBXBuildFile; fileRef = D87864AA224D692F0097671F /* people.mov */; };
 		D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864AC224D75E50097671F /* OutlinedLabel.swift */; };
 		D87864AF224D80500097671F /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864AE224D80500097671F /* AnswerViewController.swift */; };
+		D87864B1224D90CF0097671F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864B0224D90CF0097671F /* SessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D87864AA224D692F0097671F /* people.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = people.mov; sourceTree = "<group>"; };
 		D87864AC224D75E50097671F /* OutlinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedLabel.swift; sourceTree = "<group>"; };
 		D87864AE224D80500097671F /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		D87864B0224D90CF0097671F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				D835DBC8224D226E001FE2EE /* AppDelegate.swift */,
 				D835DBCA224D226E001FE2EE /* ViewController.swift */,
 				D87864AE224D80500097671F /* AnswerViewController.swift */,
+				D87864B0224D90CF0097671F /* SessionManager.swift */,
 				D835DBCC224D226E001FE2EE /* Main.storyboard */,
 				D87864AC224D75E50097671F /* OutlinedLabel.swift */,
 				D835DBCF224D2271001FE2EE /* Assets.xcassets */,
@@ -412,6 +415,7 @@
 				D87864AF224D80500097671F /* AnswerViewController.swift in Sources */,
 				D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */,
 				D835DBCB224D226E001FE2EE /* ViewController.swift in Sources */,
+				D87864B1224D90CF0097671F /* SessionManager.swift in Sources */,
 				D835DBC9224D226E001FE2EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

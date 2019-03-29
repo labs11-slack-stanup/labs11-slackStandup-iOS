@@ -10,10 +10,10 @@ import UIKit
 import Auth0
 
 class LoginViewController: UIViewController {
-   
+    
     @IBOutlet weak var signInButton: UIButton!
     
-//    Credentials manager
+    //    Credentials manager
     // Create an instance of the credentials manager for storing credentials
     let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
     
@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         signInButton.layer.cornerRadius = 10
     }
     
-
+    
     @IBAction func signIn(_ sender: Any) {
         
         Auth0
@@ -31,17 +31,18 @@ class LoginViewController: UIViewController {
             .start {
                 switch $0 {
                 case .failure(let error):
-                    // Handle the error
-                    print("Error: \(error)")
+                    print("Error showing login: \(error)")
                 case .success(let credentials):
-                    // Auth0 will automatically dismiss the login page
-                    // Store the credentials
+                    guard let accessToken = credentials.accessToken, let idToken = credentials.idToken else { return }
+                    SessionManager.tokens = Tokens(accessToken: accessToken, idToken: idToken)
                     self.performSegue(withIdentifier: "LoginSuccess", sender: self)
-                    self.credentialsManager.store(credentials: credentials)
-                    print("Credentials: \(credentials)")
                 }
         }
+        
+        
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "LoginSuccess" {
