@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     //    Credentials manager
     // Create an instance of the credentials manager for storing credentials
-    let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+    
     
     override func viewDidLoad() {
         signInButton.layer.cornerRadius = 10
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         
         Auth0
             .webAuth()
-            .scope("openid profile offline_access")
+            .scope("openid profile email")
             .audience("https://mood-curie.auth0.com/userinfo")
             .start {
                 switch $0 {
@@ -35,7 +35,20 @@ class LoginViewController: UIViewController {
                 case .success(let credentials):
                     guard let accessToken = credentials.accessToken, let idToken = credentials.idToken else { return }
                     SessionManager.tokens = Tokens(accessToken: accessToken, idToken: idToken)
-                    self.performSegue(withIdentifier: "LoginSuccess", sender: self)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "LoginSuccess", sender: self)
+                    }
+                    
+                    SessionManager.retrieveProfile({ (userinfo, error) in
+                        if let error = error {
+                            print(error)
+                        }
+                        
+                        print(userinfo?.name)
+                        print(userinfo?.email)
+                        
+                    })
+                    
                 }
         }
         
@@ -44,12 +57,12 @@ class LoginViewController: UIViewController {
     
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "LoginSuccess" {
-            print("Login Successfull)")
-            guard let destinationVC = segue.destination as? AnswerViewController else {return}
-            destinationVC.credentialsManager = credentialsManager
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "LoginSuccess" {
+//            print("Login Successfull)")
+//            guard let destinationVC = segue.destination as? AnswerViewController else {return}
+//            destinationVC.credentialsManager = credentialsManager
+//        }
+//    }
 }
 
