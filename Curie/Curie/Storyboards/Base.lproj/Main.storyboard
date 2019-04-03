@@ -21,21 +21,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JV8-OE-whJ" customClass="SDLoopingVideoView" customModule="SDLoopingVideoView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whW-hW-azk">
-                                        <rect key="frame" x="87.5" y="475" width="200" height="42"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="8Fd-T2-6WT"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <state key="normal" title="Log In"/>
-                                        <connections>
-                                            <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqe-4j-Ad6"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PiV-Ef-aJ8">
+                                        <rect key="frame" x="112.5" y="463" width="150" height="104"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whW-hW-azk">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="42"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="H1q-Gl-4rF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Log In"/>
+                                                <connections>
+                                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqe-4j-Ad6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-c3-l27">
+                                                <rect key="frame" x="0.0" y="62" width="150" height="42"/>
+                                                <color key="backgroundColor" red="0.0078431372549019607" green="0.78431372549019607" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="tlj-9N-T02"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOP-Jp-pig"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otB-zK-Ti3" customClass="OutlinedLabel" customModule="Curie" customModuleProvider="target">
-                                        <rect key="frame" x="89" y="150" width="197.5" height="92"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="77"/>
+                                        <rect key="frame" x="103" y="150" width="169" height="92"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="77"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -43,9 +62,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="otB-zK-Ti3" firstAttribute="top" secondItem="JV8-OE-whJ" secondAttribute="top" constant="150" id="eLj-Zz-nib"/>
-                                    <constraint firstItem="whW-hW-azk" firstAttribute="centerX" secondItem="JV8-OE-whJ" secondAttribute="centerX" id="lHq-t0-QDd"/>
+                                    <constraint firstAttribute="bottom" secondItem="PiV-Ef-aJ8" secondAttribute="bottom" constant="100" id="ixD-2O-zrh"/>
                                     <constraint firstItem="otB-zK-Ti3" firstAttribute="centerX" secondItem="JV8-OE-whJ" secondAttribute="centerX" id="omb-hH-ONI"/>
-                                    <constraint firstAttribute="bottom" secondItem="whW-hW-azk" secondAttribute="bottom" constant="150" id="wac-XC-L7C"/>
+                                    <constraint firstItem="PiV-Ef-aJ8" firstAttribute="centerX" secondItem="JV8-OE-whJ" secondAttribute="centerX" id="vzl-wm-sOC"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="videoName" value="people"/>
@@ -64,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="signInButton" destination="whW-hW-azk" id="0rl-1q-pib"/>
+                        <outlet property="signUpButton" destination="7ab-c3-l27" id="VnS-ec-1j6"/>
                         <segue destination="dqM-Du-qh8" kind="show" identifier="LoginSuccess" id="NlB-zh-uzR"/>
                     </connections>
                 </viewController>

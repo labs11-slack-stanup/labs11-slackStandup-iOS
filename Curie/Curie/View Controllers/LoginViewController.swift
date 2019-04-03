@@ -11,14 +11,17 @@ import Auth0
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var signInButton: UIButton!
+    let userController = UserController()
     
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     //    Credentials manager
     // Create an instance of the credentials manager for storing credentials
     
     
     override func viewDidLoad() {
         signInButton.layer.cornerRadius = 10
+        signUpButton.layer.cornerRadius = 10
     }
     
     
@@ -44,8 +47,20 @@ class LoginViewController: UIViewController {
                             print(error)
                         }
                         
-                        print(userinfo?.name)
-                        print(userinfo?.email)
+                        guard let fname = userinfo?.givenName, let lname = userinfo?.familyName, let email = userinfo?.email else {return}
+//
+                        let tempUser = User(first: fname , last: lname, email: email)
+//
+                        self.userController.fetchMoreUserData(user: tempUser, completion: { (user) in
+                            if let user = user {
+                                self.userController.user = user
+                            } 
+                        })
+                        
+//                        print(userinfo?.name)
+//                        print(userinfo?.familyName)
+//                        print(userinfo?.givenName)
+//                        print(userinfo?.email)
                         
                     })
                     
@@ -57,12 +72,12 @@ class LoginViewController: UIViewController {
     
     
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "LoginSuccess" {
-//            print("Login Successfull)")
-//            guard let destinationVC = segue.destination as? AnswerViewController else {return}
-//            destinationVC.credentialsManager = credentialsManager
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LoginSuccess" {
+            print("Login Successfull)")
+            guard let destinationVC = segue.destination as? AnswerViewController else {return}
+            destinationVC.userController = userController
+        }
+    }
 }
 

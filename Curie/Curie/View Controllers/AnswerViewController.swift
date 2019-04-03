@@ -19,7 +19,7 @@ class AnswerViewController: UIViewController {
      }
      */
     
-//    var credentialsManager: CredentialsManager?
+    var userController: UserController?
 //    var profile: UserInfo?{
 //        didSet{
 //            print(profile?.name)

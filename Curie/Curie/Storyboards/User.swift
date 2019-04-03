@@ -8,13 +8,13 @@
 
 import Foundation
 
-class User {
+class User:Codable {
     
     var firstName:String
     var lastName:String
     var email:String
     var type:String?
-    var team_id:String?
+    var team_id:Int?
     
     init(first:String, last:String, email:String) {
         self.firstName = first
