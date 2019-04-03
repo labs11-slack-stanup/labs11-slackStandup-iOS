@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 enum HTTPMethod: String {
     case get = "GET"
@@ -18,6 +17,10 @@ enum HTTPMethod: String {
 
 class UserController {
     
+//    static let shared = UserController()
+//    
+//    private init() {}
+//    
     var user: User?{
         didSet{
             print(user)
@@ -54,6 +57,8 @@ class UserController {
                 NSLog("Error getting data: \(error)")
                 completion(nil)
             }
-            }.resume()
+        }.resume()
     }
+    
+//    func createNewUser
 }
