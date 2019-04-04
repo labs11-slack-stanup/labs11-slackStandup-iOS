@@ -10,6 +10,7 @@ import Foundation
 
 class User:Codable {
     
+    var id:Int?
     var firstName:String
     var lastName:String
     var email:String
