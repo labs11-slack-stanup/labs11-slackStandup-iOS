@@ -10,19 +10,35 @@ import UIKit
 
 class AnswerViewController: UIViewController {
     
-    @IBOutlet var lblsuccess:UILabel!
     var userController: UserController?
     
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var moodContainer: UIView!
+    
+    @IBOutlet weak var surveyContainer: UIView!
+    
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.leftBarButtonItem?.isEnabled = false
-        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.clear
-        
-        guard let userController = userController else {return}
-        
-        guard let name = userController.user?.firstName, let type = userController.user?.type else {return}
-        
-        lblsuccess.text = "Name:\(name) \nType:\(type)"
+        super.viewWillAppear(animated)
+        segmentSelected(segmentControl)
     }
+    
+    @IBAction func segmentSelected(_ sender: UISegmentedControl) {
+        
+         switch sender.selectedSegmentIndex
+         {
+         case 0 :
+            moodContainer.isHidden = false
+            surveyContainer.isHidden = true
+         case 1:
+            moodContainer.isHidden = true
+            surveyContainer.isHidden = false
+         default:
+            break;
+            
+        }
+        
+    }
+    
 
     
 }
