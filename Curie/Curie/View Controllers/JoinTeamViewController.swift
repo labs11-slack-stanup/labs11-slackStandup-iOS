@@ -22,7 +22,6 @@ class JoinTeamViewController: UIViewController {
     
     @IBAction func joinTeam(_ sender: Any) {
     
-        
         guard let user = userController?.user, let teamCode = teamCodeField.text else {return}
         
         guard let code = Int(teamCode) else {return}
