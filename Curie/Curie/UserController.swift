@@ -30,6 +30,10 @@ class UserController {
 //    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")!
     let baseURL = URL(string: "http://localhost:5003/api/")!
     
+    func loadResponses(user:User, completion: @escaping ([String: String]?) -> Void){
+        
+    }
+    
     func joinUserTeam(user:User, joinCode:Int, completion: @escaping (Int?) -> Void){
         
         var requestURL = baseURL
@@ -140,5 +144,4 @@ class UserController {
         }.resume()
     }
     
-//    func createNewUser
 }
