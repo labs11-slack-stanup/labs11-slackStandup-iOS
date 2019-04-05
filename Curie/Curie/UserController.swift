@@ -30,13 +30,42 @@ class UserController {
 //    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")!
     let baseURL = URL(string: "http://localhost:5003/api/")!
     
-    func joinUserTeam(user:User, completion: @escaping (Int?) -> Void){
+    func joinUserTeam(user:User, joinCode:Int, completion: @escaping (Int?) -> Void){
         
         var requestURL = baseURL
-        requestURL.appendPathComponent("team_members/\(user.id)/join")
+        guard let userid = user.id else {return}
+        requestURL.appendPathComponent("team_members/\(userid)/join")
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.put.rawValue
+        
+        let parameters = ["team_code": joinCode]
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let error = error {
+                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                //                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            
+            completion(response.statusCode)
+            
+            }.resume()
         
         
     }

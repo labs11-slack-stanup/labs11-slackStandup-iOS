@@ -14,6 +14,9 @@ class AnswerViewController: UIViewController {
     var userController: UserController?
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.leftBarButtonItem?.isEnabled = false
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.clear
+        
         guard let userController = userController else {return}
         
         guard let name = userController.user?.firstName, let type = userController.user?.type else {return}
