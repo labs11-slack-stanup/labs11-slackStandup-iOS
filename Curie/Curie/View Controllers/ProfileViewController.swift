@@ -1,27 +1,29 @@
 //
-//  ResponseTabController.swift
+//  ProfileViewController.swift
 //  Curie
 //
-//  Created by Farhan on 4/4/19.
+//  Created by Farhan on 4/5/19.
 //  Copyright © 2019 Farhan Farooqui. All rights reserved.
 //
 
 import UIKit
 
-class ResponseTabController: UITabBarController {
+class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var teamLabel: UILabel!
+    
+    
+    var userController: UserController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        // self.navigationController?.navigationBar.backItem?.hidesBackButton = true
-//        self.navigationItem.leftBarButtonItem?.isEnabled = false
-//        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.clear
     }
-    
-//    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-//        <#code#>
-//    }
     
 
     /*
