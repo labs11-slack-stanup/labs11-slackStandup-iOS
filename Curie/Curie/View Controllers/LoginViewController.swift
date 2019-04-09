@@ -136,9 +136,15 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "LoginSuccess" {
             print("Login Successfull")
-            guard let destinationVC = segue.destination as? UITabBarController, let nextVC =  destinationVC.children.first as? AnswerViewController else {return}
+            guard let destinationVC = segue.destination as? UITabBarController else { return }
             
-            nextVC.userController = userController
+            destinationVC.children.forEach { (navc) in
+                guard let navc = navc as? UINavigationController else { return }
+                guard let vc = navc.topViewController as? UserControllerContaining else {return}
+                vc.userController = userController
+                
+            }
+            
         }
         
         else if segue.identifier == "Signup" {

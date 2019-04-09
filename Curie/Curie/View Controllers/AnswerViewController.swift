@@ -8,9 +8,13 @@
 
 import UIKit
 
-class AnswerViewController: UIViewController {
+class AnswerViewController: UIViewController, UserControllerContaining {
     
-    var userController: UserController?
+    var userController: UserController? {
+        didSet {
+            print("Check 1")
+        }
+    }
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var moodContainer: UIView!

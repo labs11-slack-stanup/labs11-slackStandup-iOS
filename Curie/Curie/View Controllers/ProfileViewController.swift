@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UserControllerContaining {
     
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -17,10 +17,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var teamLabel: UILabel!
     
     
-    var userController: UserController?
+    var userController: UserController?{
+        didSet {
+            print("Check 3")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
