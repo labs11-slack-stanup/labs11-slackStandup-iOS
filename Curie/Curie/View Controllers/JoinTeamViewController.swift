@@ -8,9 +8,13 @@
 
 import UIKit
 
-class JoinTeamViewController: UIViewController {
+class JoinTeamViewController: UIViewController, UserControllerContaining {
     
-    var userController: UserController?
+    var userController: UserController?{
+        didSet {
+            print("Check 2")
+        }
+    }
 
     @IBOutlet weak var teamCodeField: UITextField!
     

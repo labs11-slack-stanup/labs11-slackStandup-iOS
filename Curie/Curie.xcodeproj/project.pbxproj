@@ -15,6 +15,8 @@
 		D830966E2256B40300A30E69 /* JoinTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D830966D2256B40300A30E69 /* JoinTeamViewController.swift */; };
 		D83096742256EFFF00A30E69 /* ResponseNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83096732256EFFF00A30E69 /* ResponseNavController.swift */; };
 		D83096762256F1B400A30E69 /* ResponseTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83096752256F1B400A30E69 /* ResponseTabController.swift */; };
+		D83096782257FE0100A30E69 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83096772257FE0100A30E69 /* ProfileViewController.swift */; };
+		D830967A2258055F00A30E69 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83096792258055F00A30E69 /* HistoryViewController.swift */; };
 		D835DBC9224D226E001FE2EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBC8224D226E001FE2EE /* AppDelegate.swift */; };
 		D835DBCB224D226E001FE2EE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBCA224D226E001FE2EE /* LoginViewController.swift */; };
 		D835DBCE224D226E001FE2EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D835DBCC224D226E001FE2EE /* Main.storyboard */; };
@@ -23,6 +25,7 @@
 		D835DBDE224D2271001FE2EE /* CurieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBDD224D2271001FE2EE /* CurieTests.swift */; };
 		D835DBE9224D2271001FE2EE /* CurieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBE8224D2271001FE2EE /* CurieUITests.swift */; };
 		D835DBF9224D2FFA001FE2EE /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = D835DBF8224D2FFA001FE2EE /* Auth0.plist */; };
+		D86B4CC1225D3A1E00C10D81 /* UserControllerContaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */; };
 		D87864AB224D692F0097671F /* people.mov in Resources */ = {isa = PBXBuildFile; fileRef = D87864AA224D692F0097671F /* people.mov */; };
 		D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864AC224D75E50097671F /* OutlinedLabel.swift */; };
 		D87864AF224D80500097671F /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864AE224D80500097671F /* AnswerViewController.swift */; };
@@ -61,6 +64,8 @@
 		D830966D2256B40300A30E69 /* JoinTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamViewController.swift; sourceTree = "<group>"; };
 		D83096732256EFFF00A30E69 /* ResponseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResponseNavController.swift; path = "Curie/View Controllers/ResponseNavController.swift"; sourceTree = SOURCE_ROOT; };
 		D83096752256F1B400A30E69 /* ResponseTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResponseTabController.swift; path = "Curie/View Controllers/ResponseTabController.swift"; sourceTree = SOURCE_ROOT; };
+		D83096772257FE0100A30E69 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = "Curie/View Controllers/ProfileViewController.swift"; sourceTree = SOURCE_ROOT; };
+		D83096792258055F00A30E69 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryViewController.swift; path = "Curie/View Controllers/HistoryViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D835DBC5224D226E001FE2EE /* Curie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D835DBC8224D226E001FE2EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D835DBCA224D226E001FE2EE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +80,7 @@
 		D835DBE8224D2271001FE2EE /* CurieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurieUITests.swift; sourceTree = "<group>"; };
 		D835DBEA224D2271001FE2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D835DBF8224D2FFA001FE2EE /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserControllerContaining.swift; path = "View Controllers/UserControllerContaining.swift"; sourceTree = "<group>"; };
 		D87864AA224D692F0097671F /* people.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = people.mov; sourceTree = "<group>"; };
 		D87864AC224D75E50097671F /* OutlinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedLabel.swift; sourceTree = "<group>"; };
 		D87864AE224D80500097671F /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,8 @@
 				D835DBCA224D226E001FE2EE /* LoginViewController.swift */,
 				D87864AE224D80500097671F /* AnswerViewController.swift */,
 				D830966D2256B40300A30E69 /* JoinTeamViewController.swift */,
+				D83096772257FE0100A30E69 /* ProfileViewController.swift */,
+				D83096792258055F00A30E69 /* HistoryViewController.swift */,
 				D83096732256EFFF00A30E69 /* ResponseNavController.swift */,
 				D83096752256F1B400A30E69 /* ResponseTabController.swift */,
 			);
@@ -183,8 +191,9 @@
 				D87864B0224D90CF0097671F /* SessionManager.swift */,
 				D830966922540CF000A30E69 /* User.swift */,
 				D830966B2254227200A30E69 /* UserController.swift */,
-				D8309668225265D100A30E69 /* Storyboards */,
+				D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */,
 				D87864AC224D75E50097671F /* OutlinedLabel.swift */,
+				D8309668225265D100A30E69 /* Storyboards */,
 				D835DBCF224D2271001FE2EE /* Assets.xcassets */,
 				D87864AA224D692F0097671F /* people.mov */,
 				D835DBD4224D2271001FE2EE /* Info.plist */,
@@ -448,9 +457,12 @@
 				D87864AF224D80500097671F /* AnswerViewController.swift in Sources */,
 				D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */,
 				D83096762256F1B400A30E69 /* ResponseTabController.swift in Sources */,
+				D830967A2258055F00A30E69 /* HistoryViewController.swift in Sources */,
 				D83096742256EFFF00A30E69 /* ResponseNavController.swift in Sources */,
 				D830966A22540CF000A30E69 /* User.swift in Sources */,
 				D835DBCB224D226E001FE2EE /* LoginViewController.swift in Sources */,
+				D86B4CC1225D3A1E00C10D81 /* UserControllerContaining.swift in Sources */,
+				D83096782257FE0100A30E69 /* ProfileViewController.swift in Sources */,
 				D830966C2254227200A30E69 /* UserController.swift in Sources */,
 				D830966E2256B40300A30E69 /* JoinTeamViewController.swift in Sources */,
 				D87864B1224D90CF0097671F /* SessionManager.swift in Sources */,
