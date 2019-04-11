@@ -10,11 +10,7 @@ import UIKit
 
 class AnswerViewController: UIViewController, UserControllerContaining {
     
-    var userController: UserController? {
-        didSet {
-            print("Check 1")
-        }
-    }
+    var userController: UserController?
     
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var moodContainer: UIView!
@@ -41,6 +37,18 @@ class AnswerViewController: UIViewController, UserControllerContaining {
             
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "MoodEmbed") {
+            guard let vc = segue.destination  as? MoodSurveyViewController else {return}
+            vc.userController = userController
+        }
+        
+        else if (segue.identifier == "CurieEmbed") {
+            guard let vc = segue.destination  as? CurieSurveyViewController else {return}
+            vc.userController = userController
+        }
     }
     
 
