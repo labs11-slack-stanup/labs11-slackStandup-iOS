@@ -7,6 +7,7 @@
 //  Copyright © 2019 Farhan Farooqui. All rights reserved.
 //
 
+import Emoji
 import UIKit
 
 class MoodSurveyViewController: UIViewController {
@@ -17,7 +18,7 @@ class MoodSurveyViewController: UIViewController {
 //    @IBOutlet weak var questionLabel: UILabel!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+//        super.viewDidLoad()
 
         guard let userController = userController, let user = userController.user else {return}
         userController.loadPossibleMoodSurveys(user: user) { (surveys) in
@@ -31,15 +32,25 @@ class MoodSurveyViewController: UIViewController {
                     qlabel.text = survey.description
                     self.questionStackView.addArrangedSubview(qlabel)
 //                         now load answer options
-                        for answer in survey.answers {
-                            
-                            let aBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-//                            aBtn.titleLabel = answer
-                            
-                        }
+                        
+                    
+                        
+//                        for answer in survey.answers {
+//
+//                            let aBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+//                            aBtn.titleLabel?.text = answer.emojiUnescapedString
+//
+//                        }
                         
                     }
+                    
                 }
+            
+//            DispatchQueue.main.async {
+//                let submitBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//                submitBtn.titleLabel = "Su"
+//                questionStackView.addArrangedSubview(submitBtn)
+//            }
         }
     }
 

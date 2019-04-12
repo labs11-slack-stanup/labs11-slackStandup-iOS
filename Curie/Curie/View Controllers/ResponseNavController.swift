@@ -13,7 +13,7 @@ class ResponseNavController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationBar.barTintColor = .red
+        self.navigationBar.barTintColor = UIColor(red: 2.0/255.0, green: 200.0/255.0, blue: 167.0/255.0, alpha: 1.0)
 //        guard let item = self.navigationBar.backItem else {return}
 //        item.hidesBackButton = true
 //        self.navigationItem.leftBarButtonItem = nil
