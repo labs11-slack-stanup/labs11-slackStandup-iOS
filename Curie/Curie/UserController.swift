@@ -17,20 +17,41 @@ enum HTTPMethod: String {
 
 class UserController {
     
-//    static let shared = UserController()
-//    
-//    private init() {}
-//    
-    var user: User?{
-        didSet{
-            print(user)
-        }
-    }
+    var user: User?
     
-//    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")!
-    let baseURL = URL(string: "http://localhost:5003/api/")!
+    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")!
+//    let baseURL = URL(string: "http://localhost:5003/api/")!
     
-    func loadResponses(user:User, completion: @escaping ([String: String]?) -> Void){
+    func loadPossibleMoodSurveys(user:User, completion: @escaping ([MoodSurvey]?) -> Void){
+        var requestURL = baseURL
+        guard let userid = user.id else {return}
+        requestURL.appendPathComponent("surveys/surveys/team-member/\(userid)")
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            //Typical Error checking logic
+            if let error = error {
+                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned from data task: \(error!)")
+                completion(nil)
+                return
+            }
+            do {
+                //Come back to sort
+                let fetchedSurveys = try JSONDecoder().decode(Array<MoodSurvey>.self, from: data)
+                completion(fetchedSurveys)
+            } catch {
+                NSLog("Error getting data: \(error)")
+                completion(nil)
+            }
+            }.resume()
+        
         
     }
     

@@ -113,9 +113,11 @@ class LoginViewController: UIViewController {
                         self.userController.createNewUser(user: tempUser, completion: { (responseCode) in
                             guard let responseCode = responseCode else {return}
                             if responseCode >= 200 {
+                                
                                 self.userController.fetchMoreUserData(user: tempUser, completion: { (user) in
                                     if let user = user {
                                         self.userController.user = user
+                                        
                                         DispatchQueue.main.async {
                                             self.performSegue(withIdentifier: "Signup", sender: self)
                                         }

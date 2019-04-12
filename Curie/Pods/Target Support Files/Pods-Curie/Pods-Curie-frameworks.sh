@@ -145,12 +145,14 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Auth0/Auth0.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Emoji-swift/Emoji.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDLoopingVideoView/SDLoopingVideoView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SimpleKeychain/SimpleKeychain.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Auth0/Auth0.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Emoji-swift/Emoji.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SDLoopingVideoView/SDLoopingVideoView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SimpleKeychain/SimpleKeychain.framework"
 fi

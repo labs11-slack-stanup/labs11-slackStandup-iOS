@@ -2,27 +2,31 @@ PODS:
   - Alamofire (5.0.0-beta.3)
   - Auth0 (1.14.2):
     - SimpleKeychain
+  - Emoji-swift (0.3.0)
   - SDLoopingVideoView (1.0.3)
   - SimpleKeychain (0.8.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-beta.3)
   - Auth0 (~> 1.13)
+  - Emoji-swift
   - SDLoopingVideoView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Auth0
+    - Emoji-swift
     - SDLoopingVideoView
     - SimpleKeychain
 
 SPEC CHECKSUMS:
   Alamofire: 50d6fa7e8cbe7f84559e86ab641ffd029db655f8
   Auth0: df9ac013e7850052fea1dcd53fa09bb129121721
+  Emoji-swift: 3f07baeecbeb1490193299f993890020aae8c413
   SDLoopingVideoView: b5303b3c0b49c39e07b8baf493491bf54aff36ff
   SimpleKeychain: e2485c28d82fcece35e9e41faeac42ebfe614815
 
-PODFILE CHECKSUM: 2ef1dd99f6030807781623636ec80f41fab2c9e6
+PODFILE CHECKSUM: 73ca3b1ba4d327d58378f0a59261c333f179edc9
 
 COCOAPODS: 1.5.3

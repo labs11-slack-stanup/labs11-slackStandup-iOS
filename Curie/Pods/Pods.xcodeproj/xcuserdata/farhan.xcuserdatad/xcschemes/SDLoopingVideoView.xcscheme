@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9728791A034E7A30EA5403DD216C9760"
+               BlueprintIdentifier = "CC5BFBD52727B06D1D746ECB4F65AA68"
                BlueprintName = "SDLoopingVideoView"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "SDLoopingVideoView.framework">

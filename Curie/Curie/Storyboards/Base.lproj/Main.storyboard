@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T37-ga-Fw5">
                                 <rect key="frame" x="0.0" y="184" width="414" height="629"/>
                                 <connections>
-                                    <segue destination="x4b-0q-asF" kind="embed" id="p2J-LM-HY7"/>
+                                    <segue destination="x4b-0q-asF" kind="embed" identifier="MoodEmbed" id="p2J-LM-HY7"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="64i-df-Kd3">
@@ -131,7 +131,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XOx-4P-MVn">
                                 <rect key="frame" x="0.0" y="184" width="414" height="629"/>
                                 <connections>
-                                    <segue destination="1YO-Cy-Tud" kind="embed" id="2W6-aS-sP8"/>
+                                    <segue destination="1YO-Cy-Tud" kind="embed" identifier="CurieEmbed" id="2W6-aS-sP8"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -211,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avi-6N-IQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="358" y="885"/>
+            <point key="canvasLocation" x="375" y="905"/>
         </scene>
         <!--Profile-->
         <scene sceneID="fy3-5K-deU">
@@ -222,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LhE-6n-DvU">
-                                <rect key="frame" x="8" y="190" width="398" height="181.5"/>
+                                <rect key="frame" x="8" y="190" width="398" height="241.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Farhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJu-bZ-rye">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
@@ -247,6 +247,14 @@
                                         <color key="tintColor" red="0.85490196080000003" green="0.19301735950000001" blue="0.095578052519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Reset Password"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gP-rl-OM7">
+                                        <rect key="frame" x="0.0" y="211.5" width="398" height="30"/>
+                                        <color key="tintColor" red="0.85490196080000003" green="0.19301735950000001" blue="0.095578052519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Log Out"/>
+                                        <connections>
+                                            <action selector="logOut:" destination="blh-m7-BhG" eventType="touchUpInside" id="1sf-M1-ard"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -263,6 +271,7 @@
                         <outlet property="emailLabel" destination="L5m-ET-k7t" id="jzt-Pb-pbl"/>
                         <outlet property="nameLabel" destination="rJu-bZ-rye" id="7aP-wx-PkC"/>
                         <outlet property="teamLabel" destination="P8W-9S-bgf" id="nfs-v2-Z54"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="q7F-tF-MJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcK-Ae-rfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -320,7 +329,6 @@
         <!--Response Nav Controller-->
         <scene sceneID="Mxk-Gj-fcR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9uC-p0-Q2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gLI-et-kI1" customClass="ResponseNavController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eaQ-7F-KLo">
@@ -332,6 +340,7 @@
                         <segue destination="ghC-Mm-A8P" kind="relationship" relationship="rootViewController" id="xFf-eM-dBj"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9uC-p0-Q2v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-399" y="905"/>
         </scene>
@@ -392,25 +401,19 @@
             </objects>
             <point key="canvasLocation" x="2069.5999999999999" y="-129.08545727136433"/>
         </scene>
-        <!--View Controller-->
+        <!--Mood Survey View Controller-->
         <scene sceneID="G77-PQ-YDC">
             <objects>
-                <viewController id="x4b-0q-asF" sceneMemberID="viewController">
+                <viewController id="x4b-0q-asF" customClass="MoodSurveyViewController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DR7-F2-jNu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="629"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="t7a-hH-zej">
-                                <rect key="frame" x="66" y="144" width="282" height="157"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="t7a-hH-zej">
+                                <rect key="frame" x="66" y="144" width="282" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you feel like today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2G-MZ-hta">
-                                        <rect key="frame" x="0.0" y="0.0" width="282" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="wfb-ur-0kV">
-                                        <rect key="frame" x="0.0" y="97" width="282" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="282" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcT-6y-J3n">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
@@ -440,17 +443,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="t7a-hH-zej" firstAttribute="centerX" secondItem="DR7-F2-jNu" secondAttribute="centerX" id="iD4-km-3MH"/>
+                            <constraint firstItem="t7a-hH-zej" firstAttribute="top" secondItem="Qjo-wV-t1u" secondAttribute="top" constant="100" id="uie-0R-HDK"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qjo-wV-t1u"/>
                     </view>
+                    <connections>
+                        <outlet property="questionStackView" destination="t7a-hH-zej" id="qHd-MS-TBf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zd4-ai-lbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3957.5999999999999" y="-464.6176911544228"/>
         </scene>
-        <!--View Controller-->
+        <!--Curie Survey View Controller-->
         <scene sceneID="A08-zO-5jc">
             <objects>
-                <viewController id="1YO-Cy-Tud" sceneMemberID="viewController">
+                <viewController id="1YO-Cy-Tud" customClass="CurieSurveyViewController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xOz-uC-Xj1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="629"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -503,6 +511,7 @@
                             <constraint firstItem="hdW-by-4v5" firstAttribute="leading" secondItem="xOz-uC-Xj1" secondAttribute="leadingMargin" constant="8" id="hIk-ol-ayG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hdW-by-4v5" secondAttribute="trailing" constant="8" id="vf4-XN-TOC"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="8hZ-Rm-djm"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8qu-v8-B7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -514,7 +523,7 @@
         <image name="566-200" width="30" height="30"/>
         <image name="bot" width="1000" height="1000"/>
         <image name="menunu" width="27" height="27"/>
-        <image name="noun_Dice_1145791" width="36" height="37"/>
+        <image name="noun_Dice_1145791" width="31" height="31"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NlB-zh-uzR"/>
