@@ -26,10 +26,13 @@
 		D835DBE9224D2271001FE2EE /* CurieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D835DBE8224D2271001FE2EE /* CurieUITests.swift */; };
 		D835DBF9224D2FFA001FE2EE /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = D835DBF8224D2FFA001FE2EE /* Auth0.plist */; };
 		D86B4CC1225D3A1E00C10D81 /* UserControllerContaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */; };
+		D86B4CC3225FB7A600C10D81 /* MoodSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B4CC2225FB7A600C10D81 /* MoodSurvey.swift */; };
 		D87864AB224D692F0097671F /* people.mov in Resources */ = {isa = PBXBuildFile; fileRef = D87864AA224D692F0097671F /* people.mov */; };
 		D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864AC224D75E50097671F /* OutlinedLabel.swift */; };
-		D87864AF224D80500097671F /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864AE224D80500097671F /* AnswerViewController.swift */; };
 		D87864B1224D90CF0097671F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864B0224D90CF0097671F /* SessionManager.swift */; };
+		D8F9A295225FD49A00255439 /* CurieSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */; };
+		D8F9A296225FD49A00255439 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A293225FD49A00255439 /* AnswerViewController.swift */; };
+		D8F9A297225FD49A00255439 /* MoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A294225FD49A00255439 /* MoodSurveyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +84,13 @@
 		D835DBEA224D2271001FE2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D835DBF8224D2FFA001FE2EE /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserControllerContaining.swift; path = "View Controllers/UserControllerContaining.swift"; sourceTree = "<group>"; };
+		D86B4CC2225FB7A600C10D81 /* MoodSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSurvey.swift; sourceTree = "<group>"; };
 		D87864AA224D692F0097671F /* people.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = people.mov; sourceTree = "<group>"; };
 		D87864AC224D75E50097671F /* OutlinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedLabel.swift; sourceTree = "<group>"; };
-		D87864AE224D80500097671F /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		D87864B0224D90CF0097671F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurieSurveyViewController.swift; sourceTree = "<group>"; };
+		D8F9A293225FD49A00255439 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		D8F9A294225FD49A00255439 /* MoodSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodSurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				D835DBCA224D226E001FE2EE /* LoginViewController.swift */,
-				D87864AE224D80500097671F /* AnswerViewController.swift */,
+				D8F9A291225FD49A00255439 /* Answer Views */,
 				D830966D2256B40300A30E69 /* JoinTeamViewController.swift */,
 				D83096772257FE0100A30E69 /* ProfileViewController.swift */,
 				D83096792258055F00A30E69 /* HistoryViewController.swift */,
@@ -191,6 +197,7 @@
 				D87864B0224D90CF0097671F /* SessionManager.swift */,
 				D830966922540CF000A30E69 /* User.swift */,
 				D830966B2254227200A30E69 /* UserController.swift */,
+				D86B4CC2225FB7A600C10D81 /* MoodSurvey.swift */,
 				D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */,
 				D87864AC224D75E50097671F /* OutlinedLabel.swift */,
 				D8309668225265D100A30E69 /* Storyboards */,
@@ -218,6 +225,16 @@
 				D835DBEA224D2271001FE2EE /* Info.plist */,
 			);
 			path = CurieUITests;
+			sourceTree = "<group>";
+		};
+		D8F9A291225FD49A00255439 /* Answer Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8F9A293225FD49A00255439 /* AnswerViewController.swift */,
+				D8F9A294225FD49A00255439 /* MoodSurveyViewController.swift */,
+				D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */,
+			);
+			path = "Answer Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +447,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Curie/Pods-Curie-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Auth0/Auth0.framework",
+				"${BUILT_PRODUCTS_DIR}/Emoji-swift/Emoji.framework",
 				"${BUILT_PRODUCTS_DIR}/SDLoopingVideoView/SDLoopingVideoView.framework",
 				"${BUILT_PRODUCTS_DIR}/SimpleKeychain/SimpleKeychain.framework",
 			);
@@ -439,6 +457,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Auth0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Emoji.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDLoopingVideoView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleKeychain.framework",
 			);
@@ -454,17 +473,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D87864AF224D80500097671F /* AnswerViewController.swift in Sources */,
 				D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */,
 				D83096762256F1B400A30E69 /* ResponseTabController.swift in Sources */,
 				D830967A2258055F00A30E69 /* HistoryViewController.swift in Sources */,
 				D83096742256EFFF00A30E69 /* ResponseNavController.swift in Sources */,
 				D830966A22540CF000A30E69 /* User.swift in Sources */,
+				D8F9A297225FD49A00255439 /* MoodSurveyViewController.swift in Sources */,
 				D835DBCB224D226E001FE2EE /* LoginViewController.swift in Sources */,
 				D86B4CC1225D3A1E00C10D81 /* UserControllerContaining.swift in Sources */,
 				D83096782257FE0100A30E69 /* ProfileViewController.swift in Sources */,
 				D830966C2254227200A30E69 /* UserController.swift in Sources */,
+				D8F9A295225FD49A00255439 /* CurieSurveyViewController.swift in Sources */,
+				D86B4CC3225FB7A600C10D81 /* MoodSurvey.swift in Sources */,
 				D830966E2256B40300A30E69 /* JoinTeamViewController.swift in Sources */,
+				D8F9A296225FD49A00255439 /* AnswerViewController.swift in Sources */,
 				D87864B1224D90CF0097671F /* SessionManager.swift in Sources */,
 				D835DBC9224D226E001FE2EE /* AppDelegate.swift in Sources */,
 			);

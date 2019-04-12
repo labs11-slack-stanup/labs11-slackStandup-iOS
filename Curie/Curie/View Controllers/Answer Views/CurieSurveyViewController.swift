@@ -10,11 +10,7 @@ import UIKit
 
 class CurieSurveyViewController: UIViewController {
     
-    var userController: UserController?{
-        didSet{
-            print("YIPPEEEEEEEEEEEEEE")
-        }
-    }
+    var userController: UserController?
 
     override func viewDidLoad() {
         super.viewDidLoad()

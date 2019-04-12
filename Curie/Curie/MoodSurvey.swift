@@ -15,6 +15,7 @@ class MoodSurvey: Codable {
     var description: String
     var created_at: String
     var manager_id: Int
+    var answers: [String]
 
     
 //    "id": 1,

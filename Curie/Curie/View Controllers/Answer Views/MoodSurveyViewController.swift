@@ -30,7 +30,14 @@ class MoodSurveyViewController: UIViewController {
                     let qlabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
                     qlabel.text = survey.description
                     self.questionStackView.addArrangedSubview(qlabel)
-                        // now load answer options
+//                         now load answer options
+                        for answer in survey.answers {
+                            
+                            let aBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+//                            aBtn.titleLabel = answer
+                            
+                        }
+                        
                     }
                 }
         }
