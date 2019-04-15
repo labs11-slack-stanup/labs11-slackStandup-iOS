@@ -43,9 +43,11 @@ class UserController {
                 return
             }
             do {
-                //Come back to sort
+               
                 let fetchedSurveys = try JSONDecoder().decode(Array<MoodSurvey>.self, from: data)
+                
                 completion(fetchedSurveys)
+                
             } catch {
                 NSLog("Error getting data: \(error)")
                 completion(nil)
@@ -53,6 +55,36 @@ class UserController {
             }.resume()
         
         
+    }
+    
+    func loadSingleMoodSurvey(surveyID: Int, completion: @escaping (MoodSurvey?) -> Void){
+        var requestURL = baseURL
+        requestURL.appendPathComponent("surveys/surveys/survey-id/\(surveyID)")
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            //Typical Error checking logic
+            if let error = error {
+                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned from data task: \(error!)")
+                completion(nil)
+                return
+            }
+            do {
+                //Come back to sort
+                let fetchedSurvey = try JSONDecoder().decode(MoodSurvey.self, from: data)
+                completion(fetchedSurvey)
+            } catch {
+                NSLog("Error getting data: \(error)")
+                completion(nil)
+            }
+            }.resume()
     }
     
     func joinUserTeam(user:User, joinCode:Int, completion: @escaping (Int?) -> Void){

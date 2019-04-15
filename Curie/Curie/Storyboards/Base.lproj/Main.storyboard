@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -271,7 +272,6 @@
                         <outlet property="emailLabel" destination="L5m-ET-k7t" id="jzt-Pb-pbl"/>
                         <outlet property="nameLabel" destination="rJu-bZ-rye" id="7aP-wx-PkC"/>
                         <outlet property="teamLabel" destination="P8W-9S-bgf" id="nfs-v2-Z54"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="q7F-tF-MJZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcK-Ae-rfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -409,41 +409,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="629"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="t7a-hH-zej">
-                                <rect key="frame" x="66" y="144" width="282" height="60"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="wfb-ur-0kV">
-                                        <rect key="frame" x="0.0" y="0.0" width="282" height="60"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcT-6y-J3n">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="😎"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thF-Cr-nlv">
-                                                <rect key="frame" x="79" y="0.0" width="45" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="😕"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnh-qX-wUx">
-                                                <rect key="frame" x="158" y="0.0" width="45" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="😕"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puM-Th-Qxk">
-                                                <rect key="frame" x="237" y="0.0" width="45" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                <state key="normal" title="😢"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t7a-hH-zej">
+                                <rect key="frame" x="8" y="52" width="398" height="535"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="t7a-hH-zej" firstAttribute="centerX" secondItem="DR7-F2-jNu" secondAttribute="centerX" id="iD4-km-3MH"/>
-                            <constraint firstItem="t7a-hH-zej" firstAttribute="top" secondItem="Qjo-wV-t1u" secondAttribute="top" constant="100" id="uie-0R-HDK"/>
+                            <constraint firstItem="t7a-hH-zej" firstAttribute="leading" secondItem="Qjo-wV-t1u" secondAttribute="leading" constant="8" id="1XI-ej-o4S"/>
+                            <constraint firstItem="Qjo-wV-t1u" firstAttribute="trailing" secondItem="t7a-hH-zej" secondAttribute="trailing" constant="8" id="h6n-Ds-Gzx"/>
+                            <constraint firstItem="Qjo-wV-t1u" firstAttribute="bottom" secondItem="t7a-hH-zej" secondAttribute="bottom" constant="8" id="hz8-kT-ODV"/>
+                            <constraint firstItem="t7a-hH-zej" firstAttribute="top" secondItem="Qjo-wV-t1u" secondAttribute="top" constant="8" id="qS0-8F-z3q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qjo-wV-t1u"/>
                     </view>
