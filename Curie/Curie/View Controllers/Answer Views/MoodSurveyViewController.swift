@@ -19,6 +19,10 @@ class MoodSurveyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.view.showBlurLoader()
+        }
+        
 
         guard let userController = userController, let user = userController.user else {return}
         userController.loadPossibleMoodSurveys(user: user) { (surveys) in
@@ -32,16 +36,11 @@ class MoodSurveyViewController: UIViewController {
                         guard let completeSurvey = completeSurvey else {return}
                         DispatchQueue.main.async {
                             self.displaySurvey(survey: completeSurvey)
+                            self.view.removeBluerLoader()
                         }
                     })
                     
                 }
-            
-//            DispatchQueue.main.async {
-//                let submitBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-//                submitBtn.titleLabel = "Submit"
-//                questionStackView.addArrangedSubview(submitBtn)
-//            }
         }
     }
     
@@ -49,20 +48,27 @@ class MoodSurveyViewController: UIViewController {
             let qlabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             qlabel.text = survey.description
             self.questionStackView.addArrangedSubview(qlabel)
-            //                         now load answer options
-            
             
             guard let answers = survey.answers else {print("no Answers found"); return;}
-            
+            let answerStackView = UIStackView()
+            answerStackView.alignment = .fill
+            answerStackView.axis = .horizontal
+            answerStackView.spacing = 8
             for answer in answers {
                 
                 let aBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 45, height: 60))
                 
                 let emojiAnswer = ":"+answer.split(separator: ":")[1]+":"
                 print(emojiAnswer)
-                aBtn.setTitle(emojiAnswer.emojiUnescapedString, for: .normal)
                 
-                questionStackView.addArrangedSubview(aBtn)
+                aBtn.setTitle(emojiAnswer.emojiUnescapedString, for: .normal)
+                aBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+                
+                answerStackView.addArrangedSubview(aBtn)
             }
+        
+            questionStackView.addArrangedSubview(answerStackView)
     }
+    
+    
 }

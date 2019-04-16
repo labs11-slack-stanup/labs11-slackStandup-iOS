@@ -27,6 +27,8 @@
 		D835DBF9224D2FFA001FE2EE /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = D835DBF8224D2FFA001FE2EE /* Auth0.plist */; };
 		D86B4CC1225D3A1E00C10D81 /* UserControllerContaining.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */; };
 		D86B4CC3225FB7A600C10D81 /* MoodSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B4CC2225FB7A600C10D81 /* MoodSurvey.swift */; };
+		D870D20722654707006F38E1 /* CurieSurvey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D870D20622654707006F38E1 /* CurieSurvey.swift */; };
+		D870D20B2265474C006F38E1 /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D870D20A2265474C006F38E1 /* BlurLoader.swift */; };
 		D87864AB224D692F0097671F /* people.mov in Resources */ = {isa = PBXBuildFile; fileRef = D87864AA224D692F0097671F /* people.mov */; };
 		D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864AC224D75E50097671F /* OutlinedLabel.swift */; };
 		D87864B1224D90CF0097671F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864B0224D90CF0097671F /* SessionManager.swift */; };
@@ -62,7 +64,7 @@
 		8BAFC89A8B56185518ACE342 /* Pods-CurieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CurieUITests/Pods-CurieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7CE18150DF6C230373EA274 /* Pods-Curie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Curie/Pods-Curie.release.xcconfig"; sourceTree = "<group>"; };
 		D57FC5FF5D71B18038F70DFD /* Pods-Curie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Curie/Pods-Curie.debug.xcconfig"; sourceTree = "<group>"; };
-		D830966922540CF000A30E69 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Storyboards/User.swift; sourceTree = "<group>"; };
+		D830966922540CF000A30E69 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D830966B2254227200A30E69 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		D830966D2256B40300A30E69 /* JoinTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamViewController.swift; sourceTree = "<group>"; };
 		D83096732256EFFF00A30E69 /* ResponseNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResponseNavController.swift; path = "Curie/View Controllers/ResponseNavController.swift"; sourceTree = SOURCE_ROOT; };
@@ -83,8 +85,10 @@
 		D835DBE8224D2271001FE2EE /* CurieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurieUITests.swift; sourceTree = "<group>"; };
 		D835DBEA224D2271001FE2EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D835DBF8224D2FFA001FE2EE /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
-		D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserControllerContaining.swift; path = "View Controllers/UserControllerContaining.swift"; sourceTree = "<group>"; };
+		D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserControllerContaining.swift; sourceTree = "<group>"; };
 		D86B4CC2225FB7A600C10D81 /* MoodSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSurvey.swift; sourceTree = "<group>"; };
+		D870D20622654707006F38E1 /* CurieSurvey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurieSurvey.swift; sourceTree = "<group>"; };
+		D870D20A2265474C006F38E1 /* BlurLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		D87864AA224D692F0097671F /* people.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = people.mov; sourceTree = "<group>"; };
 		D87864AC224D75E50097671F /* OutlinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedLabel.swift; sourceTree = "<group>"; };
 		D87864B0224D90CF0097671F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -194,12 +198,8 @@
 			children = (
 				D835DBC8224D226E001FE2EE /* AppDelegate.swift */,
 				D83096672252655000A30E69 /* View Controllers */,
-				D87864B0224D90CF0097671F /* SessionManager.swift */,
-				D830966922540CF000A30E69 /* User.swift */,
-				D830966B2254227200A30E69 /* UserController.swift */,
-				D86B4CC2225FB7A600C10D81 /* MoodSurvey.swift */,
-				D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */,
-				D87864AC224D75E50097671F /* OutlinedLabel.swift */,
+				D870D20822654716006F38E1 /* Model */,
+				D870D20922654723006F38E1 /* Helper Views */,
 				D8309668225265D100A30E69 /* Storyboards */,
 				D835DBCF224D2271001FE2EE /* Assets.xcassets */,
 				D87864AA224D692F0097671F /* people.mov */,
@@ -225,6 +225,28 @@
 				D835DBEA224D2271001FE2EE /* Info.plist */,
 			);
 			path = CurieUITests;
+			sourceTree = "<group>";
+		};
+		D870D20822654716006F38E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D87864B0224D90CF0097671F /* SessionManager.swift */,
+				D830966922540CF000A30E69 /* User.swift */,
+				D830966B2254227200A30E69 /* UserController.swift */,
+				D86B4CC2225FB7A600C10D81 /* MoodSurvey.swift */,
+				D870D20622654707006F38E1 /* CurieSurvey.swift */,
+				D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D870D20922654723006F38E1 /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				D870D20A2265474C006F38E1 /* BlurLoader.swift */,
+				D87864AC224D75E50097671F /* OutlinedLabel.swift */,
+			);
+			path = "Helper Views";
 			sourceTree = "<group>";
 		};
 		D8F9A291225FD49A00255439 /* Answer Views */ = {
@@ -474,11 +496,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */,
+				D870D20B2265474C006F38E1 /* BlurLoader.swift in Sources */,
 				D83096762256F1B400A30E69 /* ResponseTabController.swift in Sources */,
 				D830967A2258055F00A30E69 /* HistoryViewController.swift in Sources */,
 				D83096742256EFFF00A30E69 /* ResponseNavController.swift in Sources */,
 				D830966A22540CF000A30E69 /* User.swift in Sources */,
 				D8F9A297225FD49A00255439 /* MoodSurveyViewController.swift in Sources */,
+				D870D20722654707006F38E1 /* CurieSurvey.swift in Sources */,
 				D835DBCB224D226E001FE2EE /* LoginViewController.swift in Sources */,
 				D86B4CC1225D3A1E00C10D81 /* UserControllerContaining.swift in Sources */,
 				D83096782257FE0100A30E69 /* ProfileViewController.swift in Sources */,
