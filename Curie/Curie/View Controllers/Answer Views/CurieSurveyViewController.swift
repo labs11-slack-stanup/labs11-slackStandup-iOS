@@ -11,10 +11,8 @@ import UIKit
 class CurieSurveyViewController: UIViewController {
     
     var userController: UserController?
-
-    @IBOutlet var qLabel: UILabel!
-    @IBOutlet var aField: UITextField!
     
+    @IBOutlet weak var fieldsStackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,10 +23,29 @@ class CurieSurveyViewController: UIViewController {
             
             for survey in surveys {
                 
+                let qlbl1 = UILabel()
+                qlbl1.text = survey.question_1
+                let albl1 = UITextField()
+                self.fieldsStackView.addArrangedSubview(qlbl1)
+                self.fieldsStackView.addArrangedSubview(albl1)
+                
+                let qlbl2 = UILabel()
+                qlbl2.text = survey.question_2
+                let albl2 = UITextField()
+                self.fieldsStackView.addArrangedSubview(qlbl2)
+                self.fieldsStackView.addArrangedSubview(albl2)
+                
+                let qlbl3 = UILabel()
+                qlbl3.text = survey.question_3
+                let albl3 = UITextField()
+                self.fieldsStackView.addArrangedSubview(qlbl3)
+                self.fieldsStackView.addArrangedSubview(albl3)
                 
                 print(survey.question_1)
                 print(survey.question_2)
                 print(survey.question_3)
+                
+                
             }
             
         }

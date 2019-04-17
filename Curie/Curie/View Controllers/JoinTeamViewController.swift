@@ -20,8 +20,8 @@ class JoinTeamViewController: UIViewController, UserControllerContaining {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let user = userController?.user else {return}
-        print(user.id)
+//        guard let user = userController?.user else {return}
+//        print(user.id)
     }
     
     @IBAction func joinTeam(_ sender: Any) {
