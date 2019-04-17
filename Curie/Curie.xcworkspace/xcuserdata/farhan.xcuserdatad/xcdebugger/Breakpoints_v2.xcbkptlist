@@ -205,7 +205,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
             endingLineNumber = "90"
-            landmarkName = "loadPossibleCurieSurveys(user:completion:)"
+            landmarkName = "answerMoodQuestion(userID:surveyID:feeling:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

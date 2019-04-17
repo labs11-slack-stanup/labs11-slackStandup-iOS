@@ -32,6 +32,7 @@
 		D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864AC224D75E50097671F /* OutlinedLabel.swift */; };
 		D87864B1224D90CF0097671F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864B0224D90CF0097671F /* SessionManager.swift */; };
 		D8EF455B2266BF0F00F00B53 /* ink2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D8EF455A2266BF0F00F00B53 /* ink2.mp4 */; };
+		D8EF455D2267917700F00B53 /* CurieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EF455C2267917700F00B53 /* CurieCollectionViewCell.swift */; };
 		D8F9A295225FD49A00255439 /* CurieSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */; };
 		D8F9A296225FD49A00255439 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A293225FD49A00255439 /* AnswerViewController.swift */; };
 		D8F9A297225FD49A00255439 /* MoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A294225FD49A00255439 /* MoodSurveyViewController.swift */; };
@@ -92,7 +93,8 @@
 		D87864AC224D75E50097671F /* OutlinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedLabel.swift; sourceTree = "<group>"; };
 		D87864B0224D90CF0097671F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D8EF455A2266BF0F00F00B53 /* ink2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ink2.mp4; sourceTree = "<group>"; };
-		D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurieSurveyViewController.swift; sourceTree = "<group>"; };
+		D8EF455C2267917700F00B53 /* CurieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurieCollectionViewCell.swift; path = "Curie/View Controllers/CurieCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurieSurveyViewController.swift; path = ../CurieSurveyViewController.swift; sourceTree = "<group>"; };
 		D8F9A293225FD49A00255439 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		D8F9A294225FD49A00255439 /* MoodSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodSurveyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,12 +251,21 @@
 			path = "Helper Views";
 			sourceTree = "<group>";
 		};
+		D8EF455E2267918900F00B53 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */,
+				D8EF455C2267917700F00B53 /* CurieCollectionViewCell.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		D8F9A291225FD49A00255439 /* Answer Views */ = {
 			isa = PBXGroup;
 			children = (
 				D8F9A293225FD49A00255439 /* AnswerViewController.swift */,
 				D8F9A294225FD49A00255439 /* MoodSurveyViewController.swift */,
-				D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */,
+				D8EF455E2267918900F00B53 /* New Group */,
 			);
 			path = "Answer Views";
 			sourceTree = "<group>";
@@ -496,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D87864AD224D75E50097671F /* OutlinedLabel.swift in Sources */,
+				D8EF455D2267917700F00B53 /* CurieCollectionViewCell.swift in Sources */,
 				D870D20B2265474C006F38E1 /* BlurLoader.swift in Sources */,
 				D83096762256F1B400A30E69 /* ResponseTabController.swift in Sources */,
 				D830967A2258055F00A30E69 /* HistoryViewController.swift in Sources */,
