@@ -22,6 +22,85 @@ class UserController {
 //    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")!
     let baseURL = URL(string: "http://localhost:5003/api/")!
     
+//    func fetchMoodAnswers()
+    
+    func answerCurieSurvey(userID: Int, surveyID: Int, ans1: String, ans2: String, ans3: String, completion: @escaping (Int?)->Void){
+        
+        var requestURL = baseURL
+        requestURL.appendPathComponent("curieanswers/ios/")
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        
+        let parameters = ["answer_1": "\(ans1)", "answer_2": "\(ans2)" , "answer_3": "\(ans3)", "team_member_id": "\(userID)", "survey_id": "\(surveyID)"]
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let error = error {
+                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                //                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            
+            completion(response.statusCode)
+            
+            }.resume()
+        
+    }
+    
+    func answerMoodQuestion(userID: Int, surveyID: Int, feeling: String, completion: @escaping (Int?)->Void){
+        
+        var requestURL = baseURL
+        requestURL.appendPathComponent("feelings/")
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        
+        let parameters = ["feeling_text": feeling, "team_member_id": "\(userID)", "survey_id": "\(surveyID)"]
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let error = error {
+                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                //                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            
+            completion(response.statusCode)
+            
+            }.resume()
+        
+        
+    }
+    
     func loadPossibleCurieSurveys(user: User, completion: @escaping ([CurieSurvey]?) -> Void){
         
         var requestURL = baseURL
@@ -80,7 +159,6 @@ class UserController {
             do {
                
                 let fetchedSurveys = try JSONDecoder().decode(Array<MoodSurvey>.self, from: data)
-                
                 completion(fetchedSurveys)
                 
             } catch {

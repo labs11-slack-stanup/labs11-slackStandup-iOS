@@ -19,11 +19,11 @@ class MoodSurveyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            self.view.showBlurLoader()
-        }
+//        DispatchQueue.main.async {
+//            self.view.showBlurLoader()
+//        }
         
-
+        
         guard let userController = userController, let user = userController.user else {return}
         userController.loadPossibleMoodSurveys(user: user) { (surveys) in
                 
@@ -36,12 +36,17 @@ class MoodSurveyViewController: UIViewController {
                         guard let completeSurvey = completeSurvey else {return}
                         DispatchQueue.main.async {
                             self.displaySurvey(survey: completeSurvey)
-                            self.view.removeBluerLoader()
+                            
                         }
                     })
                     
                 }
         }
+        
+//        DispatchQueue.main.async {
+//            self.view.removeBluerLoader()
+//        }
+        
     }
     
     func displaySurvey(survey: MoodSurvey){
@@ -62,7 +67,15 @@ class MoodSurveyViewController: UIViewController {
                 print(emojiAnswer)
                 
                 aBtn.setTitle(emojiAnswer.emojiUnescapedString, for: .normal)
-                aBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+                
+                guard let surveyID = survey.survey_id, let userID = userController?.user?.id else {return}
+                
+                aBtn.surveyID = surveyID
+                aBtn.userID = userID
+                aBtn.feelingText = emojiAnswer
+//                aBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+                
+                aBtn.addTarget(self, action: #selector(self.answerMoodQuestion), for: .touchUpInside)
                 
                 answerStackView.addArrangedSubview(aBtn)
             }
@@ -70,5 +83,62 @@ class MoodSurveyViewController: UIViewController {
             questionStackView.addArrangedSubview(answerStackView)
     }
     
+    @objc func answerMoodQuestion(sender:UIButton){
+        
+        guard let userController = userController else {return}
+        
+        userController.answerMoodQuestion(userID: sender.userID, surveyID: sender.surveyID, feeling: sender.feelingText) { (statusResponseCode) in
+            
+            guard let statusResponseCode = statusResponseCode else {return}
+            
+            if statusResponseCode == 201 {
+                
+                print("AnswerSuccessful")
+                
+            }
+            
+        }
+        
+    }
     
+    
+}
+
+extension UIButton {
+    fileprivate struct Holder {
+        static var _userID = Int()
+        static var _surveyID = Int()
+        static var _feelingText = String()
+    }
+    
+    
+    var userID:Int {
+        get {
+            return Holder._userID
+        }
+        set(newValue) {
+            Holder._userID = newValue
+        }
+    }
+    
+    var surveyID:Int {
+        get {
+            return Holder._surveyID
+        }
+        set(newValue) {
+            Holder._surveyID = newValue
+        }
+    }
+    
+    var feelingText:String {
+        get {
+            return Holder._feelingText
+        }
+        set(newValue) {
+            Holder._feelingText = newValue
+        }
+    }
+    
+    
+
 }

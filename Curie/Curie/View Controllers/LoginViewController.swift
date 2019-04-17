@@ -13,15 +13,20 @@ class LoginViewController: UIViewController {
     
     let userController = UserController()
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     //    Credentials manager
     // Create an instance of the credentials manager for storing credentials
+    @IBOutlet weak var logoImageView: UIImageView!
     
     
     override func viewDidLoad() {
-        signInButton.layer.cornerRadius = 10
-        signUpButton.layer.cornerRadius = 10
+        signInButton.layer.cornerRadius = 12
+        signUpButton.layer.cornerRadius = 12
+        nameLabel.layer.cornerRadius = 10
+        nameLabel.clipsToBounds = true
+        logoImageView.layer.cornerRadius = logoImageView.frame.width / 2
     }
     
     
