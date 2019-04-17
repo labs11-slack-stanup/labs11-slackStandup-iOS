@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Curie/View Controllers/LoginViewController.swift"
-            timestampString = "577210376.099202"
+            timestampString = "577222497.301273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Curie/View Controllers/JoinTeamViewController.swift"
-            timestampString = "577210376.099309"
+            timestampString = "577222497.301398"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -120,7 +120,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Curie/View Controllers/Answer Views/MoodSurveyViewController.swift"
-            timestampString = "577210376.099376"
+            timestampString = "577222497.301468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "90"
@@ -168,7 +168,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Curie/View Controllers/Answer Views/MoodSurveyViewController.swift"
-            timestampString = "577210376.0994461"
+            timestampString = "577222497.3015389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -184,7 +184,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Curie/View Controllers/Answer Views/MoodSurveyViewController.swift"
-            timestampString = "577210376.099511"
+            timestampString = "577222497.301605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Curie/Model/UserController.swift"
-            timestampString = "577210376.099595"
+            timestampString = "577222497.301669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "answerMoodQuestion(userID:surveyID:feeling:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -216,45 +216,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Curie/View Controllers/Answer Views/CurieSurveyViewController.swift"
-            timestampString = "577210376.10001"
+            timestampString = "577222497.301733"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Curie.CurieSurveyViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Curie"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/farhan/Desktop/Lambda%20School/Labs/labs11-slackStandup-iOS/Curie/Curie/View%20Controllers/Answer%20Views/CurieSurveyViewController.swift"
-                  timestampString = "577210149.119481"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "361">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Curie.CurieSurvey&gt;&gt;) -&gt; () in Curie.CurieSurveyViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Curie"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/farhan/Desktop/Lambda%20School/Labs/labs11-slackStandup-iOS/Curie/Curie/View%20Controllers/Answer%20Views/CurieSurveyViewController.swift"
-                  timestampString = "577210149.1231591"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "155">
-               </Location>
-            </Locations>
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "currentSurveys"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Curie/View Controllers/CurieCollectionViewCell.swift"
+            timestampString = "577222497.301802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "survey"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -264,12 +248,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Curie/View Controllers/Answer Views/CurieSurveyViewController.swift"
-            timestampString = "577210376.100072"
+            timestampString = "577222497.301865"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
