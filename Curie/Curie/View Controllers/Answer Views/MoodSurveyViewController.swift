@@ -68,11 +68,13 @@ class MoodSurveyViewController: UIViewController {
                 
                 aBtn.setTitle(emojiAnswer.emojiUnescapedString, for: .normal)
                 
-                guard let surveyID = survey.survey_id, let userID = userController?.user?.id else {return}
+                guard let surveyID = survey.survey_id else {return}
                 
-                aBtn.surveyID = surveyID
-                aBtn.userID = userID
-                aBtn.feelingText = emojiAnswer
+                aBtn.tag = surveyID
+                
+//                aBtn.surveyID = surveyID
+//                aBtn.userID = userID
+//                aBtn.feelingText = emojiAnswer
 //                aBtn.titleLabel?.adjustsFontSizeToFitWidth = true
                 
                 aBtn.addTarget(self, action: #selector(self.answerMoodQuestion), for: .touchUpInside)
@@ -85,9 +87,13 @@ class MoodSurveyViewController: UIViewController {
     
     @objc func answerMoodQuestion(sender:UIButton){
         
-        guard let userController = userController else {return}
+        guard let userController = userController, let userID = userController.user?.id , let feelingText = sender.titleLabel?.text else {return}
         
-        userController.answerMoodQuestion(userID: sender.userID, surveyID: sender.surveyID, feeling: sender.feelingText) { (statusResponseCode) in
+        print("UserID = \(userID)")
+        print("SurveyID = \(sender.tag)")
+        print("Feeling = \(sender.titleLabel?.text)")
+        
+        userController.answerMoodQuestion(userID: userID, surveyID: sender.tag, feeling: feelingText) { (statusResponseCode) in
             
             guard let statusResponseCode = statusResponseCode else {return}
             
@@ -96,49 +102,6 @@ class MoodSurveyViewController: UIViewController {
                 print("AnswerSuccessful")
                 
             }
-            
-        }
-        
-    }
-    
-    
-}
-
-extension UIButton {
-    fileprivate struct Holder {
-        static var _userID = Int()
-        static var _surveyID = Int()
-        static var _feelingText = String()
-    }
-    
-    
-    var userID:Int {
-        get {
-            return Holder._userID
-        }
-        set(newValue) {
-            Holder._userID = newValue
         }
     }
-    
-    var surveyID:Int {
-        get {
-            return Holder._surveyID
-        }
-        set(newValue) {
-            Holder._surveyID = newValue
-        }
-    }
-    
-    var feelingText:String {
-        get {
-            return Holder._feelingText
-        }
-        set(newValue) {
-            Holder._feelingText = newValue
-        }
-    }
-    
-    
-
 }

@@ -19,10 +19,41 @@ class UserController {
     
     var user: User?
     
-//    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")!
-    let baseURL = URL(string: "http://localhost:5003/api/")!
+    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")!
+//    let baseURL = URL(string: "http://localhost:5003/api/")!
     
-//    func fetchMoodAnswers()
+    func fetchMoodAnswers(userID: Int, completion: @escaping ([MoodAnswer]?)-> Void){
+        
+        var requestURL = baseURL
+        requestURL.appendPathComponent("feelings/myfeelings/\(userID)")
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            //Typical Error checking logic
+            if let error = error {
+                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned from data task: \(error!)")
+                completion(nil)
+                return
+            }
+            do {
+                //Come back to sort
+                let fetchedSurveyAnswers = try JSONDecoder().decode(Array<MoodAnswer>.self, from: data)
+                completion(fetchedSurveyAnswers)
+            } catch {
+                NSLog("Error getting data: \(error)")
+                completion(nil)
+            }
+            }.resume()
+        
+    }
+    
     
     func answerCurieSurvey(userID: Int, surveyID: Int, ans1: String, ans2: String, ans3: String, completion: @escaping (Int?)->Void){
         
