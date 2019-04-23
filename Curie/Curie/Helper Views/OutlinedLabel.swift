@@ -23,7 +23,7 @@ class OutlinedLabel: UILabel
         context?.setTextDrawingMode(.stroke)
         
 //        CGContextSetTextDrawingMode(context, CGTextDrawingMode.Stroke);
-        self.textColor = .lightGray
+        self.textColor = .white
         super.drawText(in: rect)
         
         context?.setTextDrawingMode(.fill)

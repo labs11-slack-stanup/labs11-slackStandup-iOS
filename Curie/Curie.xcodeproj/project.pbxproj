@@ -37,6 +37,8 @@
 		D8F9A295225FD49A00255439 /* CurieSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */; };
 		D8F9A296225FD49A00255439 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A293225FD49A00255439 /* AnswerViewController.swift */; };
 		D8F9A297225FD49A00255439 /* MoodSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A294225FD49A00255439 /* MoodSurveyViewController.swift */; };
+		D8FFC40D226E6E5A00318AB4 /* GT Walsheim Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8FFC40C226E6E5900318AB4 /* GT Walsheim Regular.ttf */; };
+		D8FFC40F226E95D300318AB4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FFC40E226E95D300318AB4 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurieSurveyViewController.swift; path = ../CurieSurveyViewController.swift; sourceTree = "<group>"; };
 		D8F9A293225FD49A00255439 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		D8F9A294225FD49A00255439 /* MoodSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodSurveyViewController.swift; sourceTree = "<group>"; };
+		D8FFC40C226E6E5900318AB4 /* GT Walsheim Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT Walsheim Regular.ttf"; sourceTree = "<group>"; };
+		D8FFC40E226E95D300318AB4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 				D870D20922654723006F38E1 /* Helper Views */,
 				D8309668225265D100A30E69 /* Storyboards */,
 				D835DBCF224D2271001FE2EE /* Assets.xcassets */,
+				D8FFC40C226E6E5900318AB4 /* GT Walsheim Regular.ttf */,
+				D8FFC40E226E95D300318AB4 /* Colors.swift */,
 				D8EF455A2266BF0F00F00B53 /* ink2.mp4 */,
 				D835DBD4224D2271001FE2EE /* Info.plist */,
 				D835DBF8224D2FFA001FE2EE /* Auth0.plist */,
@@ -381,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FFC40D226E6E5A00318AB4 /* GT Walsheim Regular.ttf in Resources */,
 				D835DBD3224D2271001FE2EE /* LaunchScreen.storyboard in Resources */,
 				D835DBD0224D2271001FE2EE /* Assets.xcassets in Resources */,
 				D835DBCE224D226E001FE2EE /* Main.storyboard in Resources */,
@@ -519,6 +526,7 @@
 				D8F9A297225FD49A00255439 /* MoodSurveyViewController.swift in Sources */,
 				D870D20722654707006F38E1 /* CurieSurvey.swift in Sources */,
 				D835DBCB224D226E001FE2EE /* LoginViewController.swift in Sources */,
+				D8FFC40F226E95D300318AB4 /* Colors.swift in Sources */,
 				D86B4CC1225D3A1E00C10D81 /* UserControllerContaining.swift in Sources */,
 				D83096782257FE0100A30E69 /* ProfileViewController.swift in Sources */,
 				D830966C2254227200A30E69 /* UserController.swift in Sources */,
