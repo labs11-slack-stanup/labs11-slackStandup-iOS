@@ -12,53 +12,43 @@ import UIKit
 
 class MoodSurveyViewController: UIViewController {
     
-    var userController: UserController?
-    var moodSurveys = [MoodSurvey]()
+    var userController: UserController?{
+        didSet {
+            guard let userController = userController, let user = userController.user else {return}
+            
+            userController.loadPossibleMoodSurveys(user: user) { (surveys) in
+                
+                guard let surveys = surveys else {return}
+                    self.moodSurveys = surveys
+            }
+        }
+    }
     
-    @IBOutlet weak var questionStackView: UIStackView!
+    var moodSurveys: [MoodSurvey]?{
+        didSet{
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+//                self.view.showBlurLoader()
+            }
+        }
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        DispatchQueue.main.async {
-//            self.view.showBlurLoader()
-//        }
-    
-        
-        
-        guard let userController = userController, let user = userController.user else {return}
-        userController.loadPossibleMoodSurveys(user: user) { (surveys) in
-                
-                guard let surveys = surveys else {return}
-                
-                for survey in surveys {
-                    guard let surveyID = survey.id else {return}
-                    userController.loadSingleMoodSurvey(surveyID: surveyID, completion: { (completeSurvey) in
-                        
-                        guard let completeSurvey = completeSurvey else {return}
-                        DispatchQueue.main.async {
-                            self.displaySurvey(survey: completeSurvey)
-                            
-                        }
-                    })
-                    
-                }
-        }
-        
-//        DispatchQueue.main.async {
-//            self.view.removeBluerLoader()
-//        }
         
     }
     
     func displaySurvey(survey: MoodSurvey){
             let qlabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             qlabel.text = survey.description
-            self.questionStackView.addArrangedSubview(qlabel)
-            
+//            self.questionStackView.addArrangedSubview(qlabel)
+        
             guard let answers = survey.answers else {print("no Answers found"); return;}
             let answerStackView = UIStackView()
             answerStackView.alignment = .fill
@@ -87,7 +77,7 @@ class MoodSurveyViewController: UIViewController {
                 answerStackView.addArrangedSubview(aBtn)
             }
         
-            questionStackView.addArrangedSubview(answerStackView)
+//            questionStackView.addArrangedSubview(answerStackView)
     }
     
     @objc func answerMoodQuestion(sender:UIButton){
@@ -109,4 +99,38 @@ class MoodSurveyViewController: UIViewController {
             }
         }
     }
+}
+
+extension MoodSurveyViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        guard let moodSurveys = moodSurveys else {return 0}
+        
+        return moodSurveys.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let reuseIdentifier = "MoodyCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MoodCollectionViewCell
+        
+        guard let userController = userController, let survey = moodSurveys?[indexPath.row], let surveyID = survey.id else {return UICollectionViewCell()}
+        
+        userController.loadSingleMoodSurvey(surveyID: surveyID) { (completeSurvey) in
+            
+            guard let completeSurvey = completeSurvey else {print("error getting survey"); return}
+            
+            cell.survey = completeSurvey
+        }
+        
+        return cell
+    }
+    
+    
+    
+    
+    
+    
+    
 }
