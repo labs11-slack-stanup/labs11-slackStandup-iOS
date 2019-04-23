@@ -24,6 +24,10 @@ class JoinTeamViewController: UIViewController, UserControllerContaining {
 //        print(user.id)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func joinTeam(_ sender: Any) {
     
         guard let user = userController?.user, let teamCode = teamCodeField.text else {return}

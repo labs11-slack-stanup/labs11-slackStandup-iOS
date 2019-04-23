@@ -31,6 +31,10 @@ class ProfileViewController: UIViewController, UserControllerContaining {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func logOut(_ sender: Any) {
         
         UserDefaults.standard.set(false, forKey: "isUserLoggedIn")

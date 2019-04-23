@@ -123,13 +123,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T37-ga-Fw5">
-                                <rect key="frame" x="0.0" y="184" width="414" height="629"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <connections>
                                     <segue destination="x4b-0q-asF" kind="embed" identifier="MoodEmbed" id="p2J-LM-HY7"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="64i-df-Kd3">
-                                <rect key="frame" x="8" y="148" width="398" height="29"/>
+                                <rect key="frame" x="8" y="96" width="398" height="29"/>
                                 <segments>
                                     <segment title="Mood"/>
                                     <segment title="Standup"/>
@@ -139,7 +139,7 @@
                                 </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XOx-4P-MVn">
-                                <rect key="frame" x="0.0" y="184" width="414" height="629"/>
+                                <rect key="frame" x="0.0" y="132" width="414" height="681"/>
                                 <connections>
                                     <segue destination="1YO-Cy-Tud" kind="embed" identifier="CurieEmbed" id="2W6-aS-sP8"/>
                                 </connections>
@@ -182,7 +182,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="vkR-lU-Bwg">
-                                <rect key="frame" x="47" y="175" width="320.5" height="162.5"/>
+                                <rect key="frame" x="47" y="123" width="320.5" height="162.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Submit the team code you received below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj3-3J-vfB">
                                         <rect key="frame" x="0.0" y="0.0" width="320.5" height="20.5"/>
@@ -228,11 +228,11 @@
             <objects>
                 <viewController id="blh-m7-BhG" customClass="ProfileViewController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P4A-Gw-L8b">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LhE-6n-DvU">
-                                <rect key="frame" x="8" y="190" width="398" height="241.5"/>
+                                <rect key="frame" x="8" y="138" width="398" height="241.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, Farhan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJu-bZ-rye">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
@@ -292,11 +292,11 @@
             <objects>
                 <viewController id="GuS-VE-hZl" customClass="HistoryViewController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P8F-jA-HHR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K3C-jn-LH0">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnswerCell" textLabel="7gy-pZ-xvb" detailTextLabel="FUr-D0-Qp1" style="IBUITableViewCellStyleValue1" id="KHA-22-WsA">
@@ -353,10 +353,13 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dqM-Du-qh8" customClass="ResponseTabController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eLL-H9-C12">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="eLL-H9-C12">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.93725490199999995" green="0.72549019609999998" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.93725490199999995" green="0.72549019609999998" blue="0.56862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="SZE-NP-Wz4" kind="relationship" relationship="viewControllers" id="VEw-xn-3hc"/>
@@ -373,8 +376,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gLI-et-kI1" customClass="ResponseNavController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eaQ-7F-KLo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eaQ-7F-KLo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -390,10 +393,10 @@
         <scene sceneID="r7n-uw-PKu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qK6-vN-kdN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="566-200" id="21X-sa-ZZq"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="noun_profile_1103174" id="21X-sa-ZZq"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2y2-yv-elp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2y2-yv-elp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -409,10 +412,10 @@
         <scene sceneID="p30-AA-iwb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fJC-r0-onB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Responses" image="noun_Dice_1145791" id="eoo-Ed-URY"/>
+                    <tabBarItem key="tabBarItem" title="Responses" image="noun_History_251062" id="eoo-Ed-URY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="1cM-WQ-xYA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1cM-WQ-xYA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -428,10 +431,10 @@
         <scene sceneID="qfM-pP-dBg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SZE-NP-Wz4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Survey" image="menunu" id="hV3-xh-x8j"/>
+                    <tabBarItem key="tabBarItem" title="Survey" image="noun_clipboard_1447626" id="hV3-xh-x8j"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="C9o-FS-Mg0">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C9o-FS-Mg0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -448,11 +451,11 @@
             <objects>
                 <viewController id="x4b-0q-asF" customClass="MoodSurveyViewController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DR7-F2-jNu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="629"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="681"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t7a-hH-zej">
-                                <rect key="frame" x="8" y="52" width="398" height="535"/>
+                                <rect key="frame" x="8" y="52" width="398" height="587"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -477,11 +480,11 @@
             <objects>
                 <viewController id="1YO-Cy-Tud" customClass="CurieSurveyViewController" customModule="Curie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xOz-uC-Xj1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="629"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="681"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DYs-VV-hcB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="629"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="681"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="cCK-pd-gxr">
                                     <size key="itemSize" width="413" height="550"/>
@@ -491,7 +494,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="surveyCell" id="O1I-zD-xMz" customClass="CurieCollectionViewCell" customModule="Curie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="413" height="550"/>
+                                        <rect key="frame" x="0.0" y="70.5" width="413" height="550"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="413" height="550"/>
@@ -582,7 +585,7 @@
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hEv-aX-Cjh">
-                                <rect key="frame" x="187.5" y="592" width="39" height="37"/>
+                                <rect key="frame" x="187.5" y="644" width="39" height="37"/>
                                 <color key="pageIndicatorTintColor" red="0.0078431372550000003" green="0.7843137255" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
@@ -608,13 +611,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="566-200" width="30" height="30"/>
         <image name="Curie." width="184" height="58"/>
         <image name="bump-collaboration-colleagues-1068523" width="375" height="812"/>
-        <image name="menunu" width="27" height="27"/>
-        <image name="noun_Dice_1145791" width="31" height="31"/>
+        <image name="noun_History_251062" width="28" height="27"/>
+        <image name="noun_clipboard_1447626" width="20" height="26"/>
+        <image name="noun_profile_1103174" width="28" height="28"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NlB-zh-uzR"/>
+        <segue reference="WzP-Sa-042"/>
     </inferredMetricsTieBreakers>
 </document>

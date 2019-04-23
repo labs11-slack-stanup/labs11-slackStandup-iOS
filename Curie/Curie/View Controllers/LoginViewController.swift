@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
     
     let userController = UserController()
     
-    @IBOutlet weak var nameLabel: OutlinedLabel!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     

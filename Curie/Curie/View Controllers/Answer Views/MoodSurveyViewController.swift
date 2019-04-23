@@ -17,11 +17,16 @@ class MoodSurveyViewController: UIViewController {
     
     @IBOutlet weak var questionStackView: UIStackView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        DispatchQueue.main.async {
 //            self.view.showBlurLoader()
 //        }
+    
         
         
         guard let userController = userController, let user = userController.user else {return}

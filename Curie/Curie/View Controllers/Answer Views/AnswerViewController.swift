@@ -20,6 +20,13 @@ class AnswerViewController: UIViewController, UserControllerContaining {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         segmentSelected(segmentControl)
+        
+        setNavigationItem()
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @IBAction func segmentSelected(_ sender: UISegmentedControl) {

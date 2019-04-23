@@ -35,8 +35,11 @@ class CurieSurveyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageControl.pageIndicatorTintColor = .gray
-//        pageControl.currentPageIndicatorTintColor = .blue
-//        collectionView.register(CurieCollectionViewCell.self, forCellWithReuseIdentifier: "surveyCell")
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
 }

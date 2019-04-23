@@ -45,6 +45,9 @@ class HistoryViewController: UIViewController, UserControllerContaining {
         tableView.reloadData()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
