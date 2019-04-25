@@ -10,29 +10,58 @@ import UIKit
 
 class ProfileViewController: UIViewController, UserControllerContaining {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var emailLabel: UILabel!
     
     @IBOutlet weak var teamLabel: UILabel!
     
+    @IBOutlet weak var feedbackBtn: UIButton!
+    
+    @IBOutlet weak var logOutBtn: UIButton!
+    
+    @IBOutlet weak var baseView: UIView!
+    
+    @IBOutlet weak var teamView: UIView!
+    
+    @IBOutlet weak var managerView: UIView!
+    
+    @IBOutlet weak var joinCodeView: UIView!
+    
+    @IBOutlet weak var emailView: UIView!
     
     var userController: UserController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let userController = userController, let user = userController.user else { return }
+        setNavigationItem()
         
-        nameLabel.text = user.firstName
-        emailLabel.text = user.email
-//        teamLabel.text = String(user.team_id) ?? "20"
-        
-        // Do any additional setup after loading the view.
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    private func setDisplay() {
+        
+        guard let userController = userController, let user = userController.user else { return }
+        
+        feedbackBtn.underline()
+        
+        welcomeLabel.text = "Welcome, \(user.firstName)"
+        
+        baseView.layer.cornerRadius = 10
+        logOutBtn.layer.cornerRadius = 10
+        teamView.layer.cornerRadius = 10
+        managerView.layer.cornerRadius = 10
+        joinCodeView.layer.cornerRadius = 10
+        emailView.layer.cornerRadius = 10
+        
+        
+    
     }
     
     @IBAction func logOut(_ sender: Any) {
@@ -54,6 +83,14 @@ class ProfileViewController: UIViewController, UserControllerContaining {
 //        appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
 //        appDelegate.window?.rootViewController = initialViewControlleripad
 //        appDelegate.window?.makeKeyAndVisible()
+        
+    }
+    
+    
+    @IBAction func sendFeedback(_ sender: Any) {
+        
+        
+        
         
     }
     
