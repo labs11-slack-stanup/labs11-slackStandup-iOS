@@ -16,6 +16,7 @@ class MoodAnswer: Codable{
     var team_member_id: Int
     var survey_id: Int
     var question: String?
+    var title: String?
     
 //    "id": 4,
 //    "feeling_text": ":skull:",

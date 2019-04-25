@@ -10,9 +10,19 @@ import UIKit
 
 class HistoryViewController: UIViewController, UserControllerContaining {
     
-    var userController: UserController?
+    var userController: UserController?{
+        didSet{
+            guard let userController = userController, let user = userController.user else {return}
+            
+            userController.loadPossibleMoodSurveys(user: user) { (surveys) in
+                guard let surveys = surveys else {return}
+                self.completedMoodSurveys = surveys
+            }
+        }
+    }
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var completedMoodSurveys:[MoodSurvey]?{
         didSet{
          guard let userController = userController, let user = userController.user, let userID = user.id else {return}
@@ -24,6 +34,7 @@ class HistoryViewController: UIViewController, UserControllerContaining {
                     guard let completedMoodSurveys = self.completedMoodSurveys else {return}
                     for survey in completedMoodSurveys {
                         if (answer.survey_id == survey.id){
+                            answer.title = survey.title
                             answer.question = survey.description
                         }
                     }
@@ -34,15 +45,12 @@ class HistoryViewController: UIViewController, UserControllerContaining {
         }
     }
     
-    var completedMoodAnswers:[MoodAnswer]?{
-        didSet{
-            tableView.reloadData()
-        }
-    }
+    var completedMoodAnswers:[MoodAnswer]?
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
+        collectionView.reloadData()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -51,13 +59,14 @@ class HistoryViewController: UIViewController, UserControllerContaining {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setNavigationItem()
         
-        guard let userController = userController, let user = userController.user else {return}
-            
-        userController.loadPossibleMoodSurveys(user: user) { (surveys) in
-            guard let surveys = surveys else {return}
-            self.completedMoodSurveys = surveys
-        }
+//        guard let userController = userController, let user = userController.user else {return}
+//
+//        userController.loadPossibleMoodSurveys(user: user) { (surveys) in
+//            guard let surveys = surveys else {return}
+//            self.completedMoodSurveys = surveys
+//        }
         
         // Load Curie Content 
         // Do any additional setup after loading the view.
@@ -65,36 +74,22 @@ class HistoryViewController: UIViewController, UserControllerContaining {
 
 }
 
-extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
+extension HistoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let completedMoodAnswers = completedMoodAnswers else {return 0}
         return completedMoodAnswers.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell", for: indexPath)
-       
-        guard let completedMoodAnswers = completedMoodAnswers else {return UITableViewCell()}
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HistoryCell", for: indexPath) as! HistoryCollectionViewCell
+        
+        guard let completedMoodAnswers = completedMoodAnswers else {return UICollectionViewCell()}
         let answer = completedMoodAnswers[indexPath.row]
-        
-        DispatchQueue.main.async {
-            cell.textLabel?.text = answer.question
-            cell.detailTextLabel?.text = answer.feeling_text
-        }
-        
+    
+        cell.moodAnswer = answer
+       
         return cell
     }
-    
-    
-    
-    
-    
     
 }

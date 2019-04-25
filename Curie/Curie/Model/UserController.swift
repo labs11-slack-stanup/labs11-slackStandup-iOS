@@ -19,8 +19,8 @@ class UserController {
     
     var user: User?
     
-    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")!
-//    let baseURL = URL(string: "http://localhost:5003/api/")!
+    let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")! // Mood testing
+//    let baseURL = URL(string: "http://localhost:5003/api/")! // Curie Testing
     
     func fetchMoodAnswers(userID: Int, completion: @escaping ([MoodAnswer]?)-> Void){
         

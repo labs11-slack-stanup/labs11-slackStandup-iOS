@@ -31,6 +31,7 @@
 		D870D20B2265474C006F38E1 /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D870D20A2265474C006F38E1 /* BlurLoader.swift */; };
 		D87864B1224D90CF0097671F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864B0224D90CF0097671F /* SessionManager.swift */; };
 		D8D58DA6226ECA4100ECFA52 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D58DA5226ECA4100ECFA52 /* MoodCollectionViewCell.swift */; };
+		D8D58DA8227155C700ECFA52 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D58DA7227155C700ECFA52 /* HistoryCollectionViewCell.swift */; };
 		D8EF455B2266BF0F00F00B53 /* ink2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D8EF455A2266BF0F00F00B53 /* ink2.mp4 */; };
 		D8EF455D2267917700F00B53 /* CurieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EF455C2267917700F00B53 /* CurieCollectionViewCell.swift */; };
 		D8EF45602268F6E900F00B53 /* MoodAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EF455F2268F6E900F00B53 /* MoodAnswers.swift */; };
@@ -96,6 +97,7 @@
 		D870D20A2265474C006F38E1 /* BlurLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		D87864B0224D90CF0097671F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D8D58DA5226ECA4100ECFA52 /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8D58DA7227155C700ECFA52 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8EF455A2266BF0F00F00B53 /* ink2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ink2.mp4; sourceTree = "<group>"; };
 		D8EF455C2267917700F00B53 /* CurieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurieCollectionViewCell.swift; path = "Curie/View Controllers/CurieCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		D8EF455F2268F6E900F00B53 /* MoodAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnswers.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				D830966D2256B40300A30E69 /* JoinTeamViewController.swift */,
 				D83096772257FE0100A30E69 /* ProfileViewController.swift */,
 				D83096792258055F00A30E69 /* HistoryViewController.swift */,
+				D8D58DA7227155C700ECFA52 /* HistoryCollectionViewCell.swift */,
 				D83096732256EFFF00A30E69 /* ResponseNavController.swift */,
 				D83096752256F1B400A30E69 /* ResponseTabController.swift */,
 			);
@@ -534,6 +537,7 @@
 				D83096782257FE0100A30E69 /* ProfileViewController.swift in Sources */,
 				D830966C2254227200A30E69 /* UserController.swift in Sources */,
 				D8F9A295225FD49A00255439 /* CurieSurveyViewController.swift in Sources */,
+				D8D58DA8227155C700ECFA52 /* HistoryCollectionViewCell.swift in Sources */,
 				D8EF45602268F6E900F00B53 /* MoodAnswers.swift in Sources */,
 				D86B4CC3225FB7A600C10D81 /* MoodSurvey.swift in Sources */,
 				D830966E2256B40300A30E69 /* JoinTeamViewController.swift in Sources */,

@@ -31,32 +31,62 @@ class MoodCollectionViewCell: UICollectionViewCell {
     }
     
     private func displaySurvey() {
+        self.layer.cornerRadius = 10
         
-        guard let survey = survey else {return}
+        guard let survey = survey, let answers = survey.answers else {return}
         
         qLabel.text = survey.description
-        ans1.titleLabel?.text = survey.answers?[0]
-        ans2.titleLabel?.text = survey.answers?[1]
-        ans3.titleLabel?.text = survey.answers?[2]
-        ans4.titleLabel?.text = survey.answers?[3]
-        
         surveyTitle.text = survey.title
         
-//        let dateFormat = DateFormatter()
-//        dateFormat.setLocalizedDateFormatFromTemplate("yyyy-MM-dd'T'HH:mm:ssz")
-//        let date = dateFormat.date(from: survey.created_at)!
-//        let dateStr = beautifyDate(date)
-        surveyDate.text = "04/23/2019"
+        let buttons = [ans1,ans2,ans3,ans4]
+       
+        for (index, answer) in answers.enumerated(){
+            
+            buttons[index]?.layer.cornerRadius = 10
+            
+            let emojiAnswer = ":"+answer.split(separator: ":")[1]+":"
+//            print(emojiAnswer)
+            
+            buttons[index]?.setTitle(emojiAnswer.emojiUnescapedString, for: .normal)
+            
+//            guard let surveyID = survey.survey_id else {continue}
+//
+//            buttons[index]?.tag = surveyID
+            
+            buttons[index]?.addTarget(self, action: #selector(self.answerMoodQuestion), for: .touchUpInside)
+            
+        }
         
+        buttons.forEach { (button) in
+            if (button?.layer.cornerRadius)! < CGFloat(10) {
+                button?.isHidden = true
+            }
+        }
+        
+        surveyDate.text = survey.created_at.split(separator: "T").first?.description
+//        surveyDate.text = survey.created_at.split(separator: " ").first?.description
     }
     
-    private func beautifyDate(_ date: Date) -> String {
+    @objc func answerMoodQuestion(sender:UIButton){
+        let userController = UserController()
         
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM d, h:mm a"
+        guard let userID = userController.user?.id, let feelingText = sender.titleLabel?.text, let surveyID = survey?.id else {return}
         
-        return dateFormatterPrint.string(from: date)
+        print("UserID = \(userID)")
+        print("SurveyID = \(sender.tag)")
+        print("Feeling = \(sender.titleLabel?.text)")
         
+        userController.answerMoodQuestion(userID: userID, surveyID: surveyID, feeling: feelingText) { (statusResponseCode) in
+            
+            guard let statusResponseCode = statusResponseCode else {return}
+            
+            if statusResponseCode == 201 {
+                
+                print("AnswerSuccessful")
+                
+            }
+        }
     }
+    
     
 }

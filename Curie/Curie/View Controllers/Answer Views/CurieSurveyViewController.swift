@@ -67,7 +67,6 @@ extension CurieSurveyViewController: UICollectionViewDelegate, UICollectionViewD
         
         guard let currentSurveys = currentSurveys else {return UICollectionViewCell()}
         
-        cell.layer.cornerRadius = 12
         cell.survey = currentSurveys[indexPath.row]
 
         return cell
