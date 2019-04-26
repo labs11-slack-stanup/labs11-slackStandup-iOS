@@ -26,13 +26,33 @@ class CurieSurveyViewController: UIViewController {
     }
     var currentSurveys:[CurieSurvey]?{
         didSet{
-            print(currentSurveys)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        collectionView.register(CurieCollectionViewCell.self, forCellWithReuseIdentifier: "surveyCell")
+        pageControl.pageIndicatorTintColor = .gray
+        
+        let cellScaling = CGFloat(0.7)
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width * cellScaling)
+        let cellHeight = floor(screenSize.height * cellScaling)
+        
+        let insetX = (view.bounds.width - cellWidth) / 2
+        let insetY = (view.bounds.height - cellHeight) / 2
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        collectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
 }
@@ -55,11 +75,11 @@ extension CurieSurveyViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let reuseIdentifier = "surveyCell"
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CurieCollectionViewCell
         
         guard let currentSurveys = currentSurveys else {return UICollectionViewCell()}
         
-        cell.layer.cornerRadius = 12
         cell.survey = currentSurveys[indexPath.row]
 
         return cell
@@ -67,12 +87,14 @@ extension CurieSurveyViewController: UICollectionViewDelegate, UICollectionViewD
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
-        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-    }
-    
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+//        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+
+        let width = scrollView.frame.width - (scrollView.contentInset.left*2)
+        let index = scrollView.contentOffset.x / width
+        let roundedIndex = round(index)
+        self.pageControl?.currentPage = Int(roundedIndex)
         
-        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+
     }
     
 }

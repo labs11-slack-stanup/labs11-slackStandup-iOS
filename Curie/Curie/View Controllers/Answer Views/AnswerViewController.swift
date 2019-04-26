@@ -19,7 +19,23 @@ class AnswerViewController: UIViewController, UserControllerContaining {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setSegmentControlAppearence()
+        
         segmentSelected(segmentControl)
+        
+        setNavigationItem()
+        
+    }
+    
+    private func setSegmentControlAppearence() {
+        self.segmentControl.layer.cornerRadius = 10.0
+        self.segmentControl.layer.borderColor = Colors.darkPeach.cgColor
+        self.segmentControl.layer.borderWidth = 1.0
+        self.segmentControl.layer.masksToBounds = true
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @IBAction func segmentSelected(_ sender: UISegmentedControl) {
