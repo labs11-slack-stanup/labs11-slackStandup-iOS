@@ -55,7 +55,20 @@ class CurieCollectionViewCell: UICollectionViewCell {
     
     @IBAction func submitSurvey(_ sender: Any) {
         
+        let userController = UserController()
+        guard let user = userController.user, let survey = survey else {return}
         
+        guard let ans1 = a1Field.text, let ans2 = a2Field.text, let ans3 = a3Field.text else {return}
+        
+        userController.answerCurieSurvey(userID: user.id!, surveyID: survey.id, ans1: ans1, ans2: ans2, ans3: ans3) { (responseCode) in
+            
+            if let responseCode = responseCode {
+                if responseCode >= 200 {
+                    print("Standup Answered")
+                }
+            }
+            
+        }
         
     }
     

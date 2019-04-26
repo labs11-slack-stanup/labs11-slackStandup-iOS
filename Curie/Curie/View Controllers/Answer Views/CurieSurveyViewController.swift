@@ -36,6 +36,19 @@ class CurieSurveyViewController: UIViewController {
         super.viewDidLoad()
         pageControl.pageIndicatorTintColor = .gray
         
+        let cellScaling = CGFloat(0.7)
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width * cellScaling)
+        let cellHeight = floor(screenSize.height * cellScaling)
+        
+        let insetX = (view.bounds.width - cellWidth) / 2
+        let insetY = (view.bounds.height - cellHeight) / 2
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        collectionView.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
+        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -44,7 +57,7 @@ class CurieSurveyViewController: UIViewController {
 
 }
 
-extension CurieSurveyViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension CurieSurveyViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -72,29 +85,6 @@ extension CurieSurveyViewController: UICollectionViewDelegate, UICollectionViewD
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 25.0
-//    }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let size = CGSize(width: view.frame.width * 0.9, height: view.frame.height)
-//        return size
-//    }
-//
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//
-//        let totalCellWidth = 80 * collectionView.numberOfItems(inSection: 0)
-//        let totalSpacingWidth = 10 * (collectionView.numberOfItems(inSection: 0) - 1)
-//
-//        let leftInset = (collectionView.layer.frame.size.width - CGFloat(totalCellWidth + totalSpacingWidth)) / 2
-//        let rightInset = leftInset
-        
-        return UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-        
-    }
-    
-
-    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
 //        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
@@ -106,10 +96,5 @@ extension CurieSurveyViewController: UICollectionViewDelegate, UICollectionViewD
         
 
     }
-    
-//    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-//
-//        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-//    }
     
 }

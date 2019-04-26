@@ -16,12 +16,17 @@ class User:Codable {
     var email:String
     var type:String?
     var team_id:Int?
+    var manager:String?
+    var teamName:String?
+    var joinCode:String?
     
     init(first:String, last:String, email:String) {
         self.firstName = first
         self.lastName = last
         self.email = email
     }
+    
+   
     
     
     

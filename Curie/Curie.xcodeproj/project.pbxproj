@@ -32,7 +32,7 @@
 		D87864B1224D90CF0097671F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87864B0224D90CF0097671F /* SessionManager.swift */; };
 		D8D58DA6226ECA4100ECFA52 /* MoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D58DA5226ECA4100ECFA52 /* MoodCollectionViewCell.swift */; };
 		D8D58DA8227155C700ECFA52 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D58DA7227155C700ECFA52 /* HistoryCollectionViewCell.swift */; };
-		D8EF455B2266BF0F00F00B53 /* ink2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D8EF455A2266BF0F00F00B53 /* ink2.mp4 */; };
+		D8D97D862272876D0030BC02 /* TeamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D97D852272876D0030BC02 /* TeamInfo.swift */; };
 		D8EF455D2267917700F00B53 /* CurieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EF455C2267917700F00B53 /* CurieCollectionViewCell.swift */; };
 		D8EF45602268F6E900F00B53 /* MoodAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EF455F2268F6E900F00B53 /* MoodAnswers.swift */; };
 		D8F9A295225FD49A00255439 /* CurieSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */; };
@@ -98,7 +98,7 @@
 		D87864B0224D90CF0097671F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D8D58DA5226ECA4100ECFA52 /* MoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8D58DA7227155C700ECFA52 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		D8EF455A2266BF0F00F00B53 /* ink2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ink2.mp4; sourceTree = "<group>"; };
+		D8D97D852272876D0030BC02 /* TeamInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamInfo.swift; sourceTree = "<group>"; };
 		D8EF455C2267917700F00B53 /* CurieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurieCollectionViewCell.swift; path = "Curie/View Controllers/CurieCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		D8EF455F2268F6E900F00B53 /* MoodAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAnswers.swift; sourceTree = "<group>"; };
 		D8F9A292225FD49A00255439 /* CurieSurveyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurieSurveyViewController.swift; path = ../CurieSurveyViewController.swift; sourceTree = "<group>"; };
@@ -217,7 +217,6 @@
 				D835DBCF224D2271001FE2EE /* Assets.xcassets */,
 				D8FFC40C226E6E5900318AB4 /* GT Walsheim Regular.ttf */,
 				D8FFC40E226E95D300318AB4 /* Colors.swift */,
-				D8EF455A2266BF0F00F00B53 /* ink2.mp4 */,
 				D835DBD4224D2271001FE2EE /* Info.plist */,
 				D835DBF8224D2FFA001FE2EE /* Auth0.plist */,
 			);
@@ -249,6 +248,7 @@
 				D830966922540CF000A30E69 /* User.swift */,
 				D830966B2254227200A30E69 /* UserController.swift */,
 				D8EF455F2268F6E900F00B53 /* MoodAnswers.swift */,
+				D8D97D852272876D0030BC02 /* TeamInfo.swift */,
 				D86B4CC2225FB7A600C10D81 /* MoodSurvey.swift */,
 				D870D20622654707006F38E1 /* CurieSurvey.swift */,
 				D86B4CC0225D3A1E00C10D81 /* UserControllerContaining.swift */,
@@ -397,7 +397,6 @@
 				D835DBD3224D2271001FE2EE /* LaunchScreen.storyboard in Resources */,
 				D835DBD0224D2271001FE2EE /* Assets.xcassets in Resources */,
 				D835DBCE224D226E001FE2EE /* Main.storyboard in Resources */,
-				D8EF455B2266BF0F00F00B53 /* ink2.mp4 in Resources */,
 				D835DBF9224D2FFA001FE2EE /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +541,7 @@
 				D86B4CC3225FB7A600C10D81 /* MoodSurvey.swift in Sources */,
 				D830966E2256B40300A30E69 /* JoinTeamViewController.swift in Sources */,
 				D8F9A296225FD49A00255439 /* AnswerViewController.swift in Sources */,
+				D8D97D862272876D0030BC02 /* TeamInfo.swift in Sources */,
 				D8FFC411226EB6F800318AB4 /* Extention+VC.swift in Sources */,
 				D87864B1224D90CF0097671F /* SessionManager.swift in Sources */,
 				D835DBC9224D226E001FE2EE /* AppDelegate.swift in Sources */,
@@ -650,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -705,7 +705,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

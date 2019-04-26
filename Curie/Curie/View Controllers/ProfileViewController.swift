@@ -32,12 +32,35 @@ class ProfileViewController: UIViewController, UserControllerContaining {
     
     @IBOutlet weak var emailView: UIView!
     
-    var userController: UserController?
+    
+    @IBOutlet weak var teamName: UILabel!
+    
+    @IBOutlet weak var managerName: UILabel!
+    
+    @IBOutlet weak var joinCode: UILabel!
+    
+    @IBOutlet weak var email: UILabel!
+    
+    var userController: UserController?{
+        didSet {
+            guard let userController = userController, let user = userController.user, let teamID = user.team_id else {return}
+            
+            userController.getManagerName(from: teamID) { (manager) in
+                if let manager = manager {
+                        user.manager = manager
+                    }
+                }
+            }
+        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setNavigationItem()
+        
+        DispatchQueue.main.async {
+            self.setDisplay()
+        }
         
     }
     
@@ -60,6 +83,19 @@ class ProfileViewController: UIViewController, UserControllerContaining {
         joinCodeView.layer.cornerRadius = 10
         emailView.layer.cornerRadius = 10
         
+        userController.getTeam(with: user.team_id!) { (teamInfo) in
+            if let teamInfo = teamInfo {
+                DispatchQueue.main.async {
+                    
+                    self.teamName.text = teamInfo.first?.name
+                    self.joinCode.text = "\(teamInfo.first!.team_code)"
+                    
+                    self.managerName.text = user.manager
+                    self.email.text = user.email
+                }
+            }
+        }
+        
         
     
     }
@@ -69,12 +105,14 @@ class ProfileViewController: UIViewController, UserControllerContaining {
         UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
 //        UserDefaults.standard.synchronize()
         
-        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        self.navigationController?.popToRootViewController(animated: true)
         
-        let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        appDel.window?.rootViewController = loginVC
-        
+//        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+//
+//        let appDel:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+//
+//        appDel.window?.rootViewController = loginVC
+//
 //        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //        let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Login") as UIViewController
 //
@@ -89,8 +127,9 @@ class ProfileViewController: UIViewController, UserControllerContaining {
     
     @IBAction func sendFeedback(_ sender: Any) {
         
+        let sms: String = "sms:+7039893933&body=Hello, I have some feedback for Curie: "
         
-        
+        UIApplication.shared.open(URL.init(string: sms.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)!, options: [:], completionHandler: nil)
         
     }
     

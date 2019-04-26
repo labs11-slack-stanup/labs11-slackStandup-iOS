@@ -22,6 +22,78 @@ class UserController {
     let baseURL = URL(string: "https://labs11-curie-web.herokuapp.com/api/")! // Mood testing
 //    let baseURL = URL(string: "http://localhost:5003/api/")! // Curie Testing
     
+    func getManagerName(from teamID: Int, completion: @escaping (String?) -> Void){
+        
+        var requestURL = baseURL
+        requestURL.appendPathComponent("team_members")
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            //Typical Error checking logic
+            if let error = error {
+                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned from data task: \(error!)")
+                completion(nil)
+                return
+            }
+            do {
+                //Come back to sort
+                let fetchedmembers = try JSONDecoder().decode(Array<User>.self, from: data)
+                
+                for member in fetchedmembers {
+                    if (member.team_id == teamID && member.type == "manager"){
+                        let managerName = "\(member.firstName) \(member.lastName)"
+                        completion(managerName)
+                    }
+                }
+                
+            } catch {
+                NSLog("Error getting data: \(error)")
+                completion(nil)
+            }
+        }.resume()
+        
+        
+    }
+    
+    func getTeam(with teamID: Int, completion: @escaping ([TeamInfo]?) -> Void) {
+        
+        var requestURL = baseURL
+        requestURL.appendPathComponent("teams/\(teamID)")
+        
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        URLSession.shared.dataTask(with: request) { (data, _, error) in
+            //Typical Error checking logic
+            if let error = error {
+                NSLog("Error fetching entries \(error)")
+                completion(nil)
+                return
+            }
+            guard let data = data else {
+                NSLog("No data returned from data task: \(error!)")
+                completion(nil)
+                return
+            }
+            do {
+                //Come back to sort
+                let fetchedTeamInfo = try JSONDecoder().decode(Array<TeamInfo>.self, from: data)
+                completion(fetchedTeamInfo)
+            } catch {
+                NSLog("Error getting data: \(error)")
+                completion(nil)
+            }
+            }.resume()
+        
+    }
+    
     func fetchMoodAnswers(userID: Int, completion: @escaping ([MoodAnswer]?)-> Void){
         
         var requestURL = baseURL
